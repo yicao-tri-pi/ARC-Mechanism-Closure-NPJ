@@ -1,0 +1,370 @@
+{
+  "han_p8_p10": [
+    {
+      "li_concentration_mol_l": 1.18,
+      "mn_nmr_kda": 18.3,
+      "peo_repeat_n": 13,
+      "polymer": "P8",
+      "sequence": "alternating",
+      "sigma_per_li_molarity": 3.559322033898306e-05,
+      "sigma_s_cm": 4.2000000000000004e-05,
+      "sigma_sd_s_cm": 4.9999999999999996e-06,
+      "tg_c": -32.0
+    },
+    {
+      "li_concentration_mol_l": 0.99,
+      "mn_nmr_kda": 21.1,
+      "peo_repeat_n": 17,
+      "polymer": "P9",
+      "sequence": "alternating",
+      "sigma_per_li_molarity": 1.9191919191919194e-05,
+      "sigma_s_cm": 1.9e-05,
+      "sigma_sd_s_cm": 2.2e-06,
+      "tg_c": -31.0
+    },
+    {
+      "li_concentration_mol_l": 0.75,
+      "mn_nmr_kda": 24.2,
+      "peo_repeat_n": 23,
+      "polymer": "P10",
+      "sequence": "alternating",
+      "sigma_per_li_molarity": 1.28e-05,
+      "sigma_s_cm": 9.6e-06,
+      "sigma_sd_s_cm": 1.3e-06,
+      "tg_c": -35.0
+    }
+  ],
+  "han_p8_p10_contrasts": {
+    "interpretation": "P8-P10 are all alternating polymers. Similar Tg does not identify conductivity, but Li concentration, side-chain length, and molecular weight change together; this is not a sequence counterexample.",
+    "p8_over_p10_li_concentration_ratio": 1.5733333333333333,
+    "p8_over_p10_sigma_per_li_ratio": 2.7807203389830515,
+    "p8_over_p10_sigma_ratio": 4.375000000000001,
+    "p8_over_p9_sigma_ratio": 2.210526315789474,
+    "p8_p10_tg_span_c": 4.0
+  },
+  "schema_version": "polymer-mechanism-audit-1.0",
+  "scientific_scope": "Descriptive source-data audit only. The calculations do not establish sequence causality, carrier identity, a dominant hopping pathway, or a microscopic mechanism.",
+  "source_data_classification": [
+    {
+      "claim_family": "Fig. 4 P1-P10 conductivity",
+      "promotion_limit": "descriptive group contrast; no replicate-level reanalysis",
+      "public_level": "summary mean and SD",
+      "replicates": "three independent replicates stated in caption; individual values absent"
+    },
+    {
+      "claim_family": "Fig. 3 Raman and solid-state 7Li NMR",
+      "promotion_limit": "spectral trend support; Raman CIP/AGG deconvolution not independently reproducible",
+      "public_level": "processed spectral x-y traces",
+      "replicates": "no replicate spectra or uncertainty"
+    },
+    {
+      "claim_family": "Fig. 3/5 MD density, RDF, residence time, MSD",
+      "promotion_limit": "reported simulation output support; no uncertainty or trajectory-level reproduction",
+      "public_level": "processed profiles and summary values",
+      "replicates": "no trajectories, seeds, or independent initializations"
+    },
+    {
+      "claim_family": "Fig. 5 PFG-NMR diffusion",
+      "promotion_limit": "supports P8 mobility magnitude, not experimental ordering of all sequences",
+      "public_level": "single SI spectrum and reported coefficient for P8; no attenuation series in XLSX",
+      "replicates": "no sequence-panel replicate data"
+    },
+    {
+      "claim_family": "Fig. 5 VTF conductivity",
+      "promotion_limit": "reported VTF trend; parameter uncertainty and equivalent-circuit sensitivity unavailable",
+      "public_level": "seven processed conductivity values per sequence",
+      "replicates": "no uncertainty or replicate-level impedance spectra"
+    },
+    {
+      "claim_family": "Fig. 6 cycling",
+      "promotion_limit": "demonstration-cell evidence only",
+      "public_level": "processed single-cell time/cycle traces",
+      "replicates": "no cell-to-cell repeats or uncertainty"
+    }
+  ],
+  "source_manifest": [
+    {
+      "bytes": 2309442,
+      "path": "evidence/npj_mechanism_audit/sources/han2023/han2023_main.pdf",
+      "sha256": "1b17982a2c831d93ce2626f2bd98fc4408d13b246c61c0e9301638a7eaf945dc"
+    },
+    {
+      "bytes": 9483265,
+      "path": "evidence/npj_mechanism_audit/sources/han2023/han2023_si.pdf",
+      "sha256": "d84aabf65c57aef6ae1b87a5e54afdd5cef26273ad17d17fbfffadf97f5f89e7"
+    },
+    {
+      "bytes": 686857,
+      "path": "evidence/npj_mechanism_audit/sources/han2023/han2023_source_data_fig3.xlsx",
+      "sha256": "6d3407a5132a4849a05f5ec4199fb389d576fa95453d342580e8386ecdf75399"
+    },
+    {
+      "bytes": 392279,
+      "path": "evidence/npj_mechanism_audit/sources/han2023/han2023_source_data_fig4.xlsx",
+      "sha256": "f7ed3e0b93287754d2ea97ff9cb0a2f63876298dc0d4e85763e1a5eefbb04c68"
+    },
+    {
+      "bytes": 518252,
+      "path": "evidence/npj_mechanism_audit/sources/han2023/han2023_source_data_fig5.xlsx",
+      "sha256": "f69a7cce2ec23e560a8bd6d792eab044c13b9153a8403681364176ec8de49f25"
+    },
+    {
+      "bytes": 862094,
+      "path": "evidence/npj_mechanism_audit/sources/han2023/han2023_source_data_fig6.xlsx",
+      "sha256": "929716f236fed4db453a01cf3932151e157525d7d867d9d39d686819cbd7c86f"
+    },
+    {
+      "bytes": 393788,
+      "path": "evidence/npj_mechanism_audit/sources/wang2012/wang2012_prl.pdf",
+      "sha256": "a9da131bd8ce636e45b670ca3e1898343b843765e6e6dee9d5da110228d3af0a"
+    },
+    {
+      "bytes": 142251,
+      "path": "evidence/npj_mechanism_audit/sources/wang2012/wang2012_supporting_information.pdf",
+      "sha256": "cdcf9712efff3cb7d3ab500f94a9a7e99a064dfdba3137ffac0eabf1ebaa2413"
+    },
+    {
+      "bytes": 571649,
+      "path": "evidence/npj_mechanism_audit/sources/wang2012/wang2013_ep_critique.pdf",
+      "sha256": "2070a937967f7fa5fadb1a7e39ee7b5c2bab1b72173afc44cfda8fecb8e441f3"
+    }
+  ],
+  "wang2012_correlation_reanalysis": {
+    "article_reported_r2_fragility_epsilon1": 0.8,
+    "article_reported_r2_fragility_epsilon2": 0.78,
+    "article_reported_r2_tg_epsilon1": 0.31,
+    "article_reported_r2_tg_epsilon2": 0.33,
+    "calculation": "unweighted OLS with intercept using rounded SI Table I values",
+    "interpretation": "The rounded public SI table preserves the qualitative ordering but does not exactly reproduce the article's R^2 values. Unrounded fit inputs are not provided; with n=5, rounding and fit details can materially change R^2. This is a numerical reproducibility tension, not evidence against the descriptive decoupling result.",
+    "rounded_table_r2_fragility_epsilon1": 0.8534912929482502,
+    "rounded_table_r2_fragility_epsilon2": 0.8373431074247112,
+    "rounded_table_r2_tg_epsilon1": 0.4880018642866753,
+    "rounded_table_r2_tg_epsilon2": 0.5024833850126608
+  },
+  "wang2012_materials": [
+    {
+      "abbreviation": "PPEOSt-b-PSt",
+      "epsilon1": 0.75,
+      "epsilon1_sd": 0.01,
+      "epsilon2": 0.78,
+      "epsilon2_sd": 0.01,
+      "fragility_m": 108,
+      "liclo4_wt_pct": 0.3,
+      "mw_kg_mol": "5.8/4.6",
+      "o_li_ratio": 540,
+      "pdi": 1.26,
+      "sample_name": "Poly(Polyethylene Oxide Styrene)-b-Polystyrene",
+      "tg_k": 338
+    },
+    {
+      "abbreviation": "PPEOSt",
+      "epsilon1": 0.72,
+      "epsilon1_sd": 0.02,
+      "epsilon2": 0.76,
+      "epsilon2_sd": 0.02,
+      "fragility_m": 101,
+      "liclo4_wt_pct": 0.3,
+      "mw_kg_mol": "5.8",
+      "o_li_ratio": 370,
+      "pdi": 1.22,
+      "sample_name": "Poly(Polyethylene Oxide Styrene)",
+      "tg_k": 265
+    },
+    {
+      "abbreviation": "PNBCEM",
+      "epsilon1": 0.41,
+      "epsilon1_sd": 0.01,
+      "epsilon2": 0.46,
+      "epsilon2_sd": 0.01,
+      "fragility_m": 93,
+      "liclo4_wt_pct": 0.5,
+      "mw_kg_mol": "6.6",
+      "o_li_ratio": 320,
+      "pdi": 1.17,
+      "sample_name": "Poly(Norbornene Carboxylic Ethoxymethyl Ester)",
+      "tg_k": 314
+    },
+    {
+      "abbreviation": "PPEOCL",
+      "epsilon1": 0.16,
+      "epsilon1_sd": 0.03,
+      "epsilon2": 0.19,
+      "epsilon2_sd": 0.02,
+      "fragility_m": 80,
+      "liclo4_wt_pct": 1.0,
+      "mw_kg_mol": "7.0",
+      "o_li_ratio": 220,
+      "pdi": 1.2,
+      "sample_name": "Poly(Polyethylene Oxide Caprolactone)",
+      "tg_k": 210
+    },
+    {
+      "abbreviation": "PPEOMA",
+      "epsilon1": -0.01,
+      "epsilon1_sd": 0.05,
+      "epsilon2": 0.05,
+      "epsilon2_sd": 0.05,
+      "fragility_m": 45,
+      "liclo4_wt_pct": 0.5,
+      "mw_kg_mol": "4.1",
+      "o_li_ratio": 460,
+      "pdi": 1.21,
+      "sample_name": "Poly(Polyethylene Oxide Methacrylate)",
+      "tg_k": 240
+    }
+  ],
+  "workbook_inventory": [
+    {
+      "file": "han2023_source_data_fig3.xlsx",
+      "formula_cells": 0,
+      "max_column": 8,
+      "max_row": 603,
+      "populated_cells": 149,
+      "sheet": "Fig 3c"
+    },
+    {
+      "file": "han2023_source_data_fig3.xlsx",
+      "formula_cells": 0,
+      "max_column": 8,
+      "max_row": 132,
+      "populated_cells": 929,
+      "sheet": "Fig 3d"
+    },
+    {
+      "file": "han2023_source_data_fig3.xlsx",
+      "formula_cells": 0,
+      "max_column": 11,
+      "max_row": 123,
+      "populated_cells": 961,
+      "sheet": "Fig 3e"
+    },
+    {
+      "file": "han2023_source_data_fig3.xlsx",
+      "formula_cells": 0,
+      "max_column": 12,
+      "max_row": 166,
+      "populated_cells": 1636,
+      "sheet": "Fig 3f"
+    },
+    {
+      "file": "han2023_source_data_fig3.xlsx",
+      "formula_cells": 0,
+      "max_column": 17,
+      "max_row": 219,
+      "populated_cells": 1544,
+      "sheet": "Fig 3g"
+    },
+    {
+      "file": "han2023_source_data_fig3.xlsx",
+      "formula_cells": 0,
+      "max_column": 7,
+      "max_row": 14,
+      "populated_cells": 13,
+      "sheet": "Fig 3h"
+    },
+    {
+      "file": "han2023_source_data_fig4.xlsx",
+      "formula_cells": 0,
+      "max_column": 3,
+      "max_row": 16,
+      "populated_cells": 13,
+      "sheet": "Fig 4b"
+    },
+    {
+      "file": "han2023_source_data_fig4.xlsx",
+      "formula_cells": 0,
+      "max_column": 7,
+      "max_row": 22,
+      "populated_cells": 19,
+      "sheet": "Fig 4c"
+    },
+    {
+      "file": "han2023_source_data_fig4.xlsx",
+      "formula_cells": 0,
+      "max_column": 5,
+      "max_row": 9,
+      "populated_cells": 29,
+      "sheet": "Fig 4e"
+    },
+    {
+      "file": "han2023_source_data_fig4.xlsx",
+      "formula_cells": 0,
+      "max_column": 6,
+      "max_row": 23,
+      "populated_cells": 22,
+      "sheet": "Fig 4f"
+    },
+    {
+      "file": "han2023_source_data_fig4.xlsx",
+      "formula_cells": 0,
+      "max_column": 10,
+      "max_row": 22,
+      "populated_cells": 144,
+      "sheet": "Fig 4g"
+    },
+    {
+      "file": "han2023_source_data_fig4.xlsx",
+      "formula_cells": 0,
+      "max_column": 7,
+      "max_row": 411,
+      "populated_cells": 1549,
+      "sheet": "Fig 4h"
+    },
+    {
+      "file": "han2023_source_data_fig4.xlsx",
+      "formula_cells": 0,
+      "max_column": 4,
+      "max_row": 11753,
+      "populated_cells": 33961,
+      "sheet": "Fig 4i"
+    },
+    {
+      "file": "han2023_source_data_fig5.xlsx",
+      "formula_cells": 0,
+      "max_column": 8,
+      "max_row": 593,
+      "populated_cells": 69,
+      "sheet": "Fig 5b"
+    },
+    {
+      "file": "han2023_source_data_fig5.xlsx",
+      "formula_cells": 0,
+      "max_column": 15,
+      "max_row": 10013,
+      "populated_cells": 100054,
+      "sheet": "Fig 5c"
+    },
+    {
+      "file": "han2023_source_data_fig5.xlsx",
+      "formula_cells": 0,
+      "max_column": 10,
+      "max_row": 593,
+      "populated_cells": 2421,
+      "sheet": "Fig 5d"
+    },
+    {
+      "file": "han2023_source_data_fig6.xlsx",
+      "formula_cells": 0,
+      "max_column": 11,
+      "max_row": 20850,
+      "populated_cells": 77307,
+      "sheet": "Fig 6a"
+    },
+    {
+      "file": "han2023_source_data_fig6.xlsx",
+      "formula_cells": 0,
+      "max_column": 3,
+      "max_row": 20850,
+      "populated_cells": 60,
+      "sheet": "Fig 6b"
+    },
+    {
+      "file": "han2023_source_data_fig6.xlsx",
+      "formula_cells": 0,
+      "max_column": 12,
+      "max_row": 593,
+      "populated_cells": 319,
+      "sheet": "Fig 6c"
+    }
+  ]
+}

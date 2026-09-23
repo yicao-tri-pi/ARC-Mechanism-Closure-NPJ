@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arc-mechanism-closure-npj"
+version = "0.1.0"
+description = "Auditable mechanism-identifiability case studies for ion transport"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+  "pydantic>=2.0",
+  "sympy>=1.12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+nasicon = [
+  "numba==0.67.0",
+  "numpy==2.2.6",
+  "pandas==2.3.3",
+  "pymatgen==2025.10.7",
+  "tables==3.10.1",
+]
+nleis = [
+  "impedance>=1.7.1",
+  "matplotlib>=3.5",
+  "numpy>=1.24",
+  "pandas>=2.0.2",
+  "scipy>=1.10",
+]
+
+[tool.setuptools]
+packages = ["arc_identifiability"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

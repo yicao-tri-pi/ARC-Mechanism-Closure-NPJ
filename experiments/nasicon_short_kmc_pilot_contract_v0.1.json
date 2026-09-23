@@ -1,0 +1,37 @@
+{
+  "schema_version": "arc-nasicon-short-kmc-pilot-contract-0.1",
+  "frozen_at_local_date": "2026-09-18",
+  "purpose": "bounded feasibility test for whether an initial-rate-separated, nonnegative-barrier pair can be advanced through the public stochastic kMC implementation",
+  "upstream_commit": "69eb10b7c52ddd85e39ebeb882b2e4ea617e7770",
+  "pair_provenance": {
+    "heldout_result": "results/nasicon_heldout_composition_scan_v0.1.json",
+    "composition_parameter_comp": 0.9,
+    "paper_formula_x": 0.3,
+    "structure_indices": [10, 41],
+    "selection_rule": "maximum nonnegative-barrier aggregate-rate ratio within the frozen 0.25 meV mean-barrier tolerance at comp=0.9",
+    "reported_initial_rate_ratio": 12.779522366297947,
+    "reported_mean_barrier_difference_mev": 0.03627188205780385,
+    "negative_directional_rate_fraction_range": [0.0, 0.0]
+  },
+  "simulation": {
+    "temperature_k": 573,
+    "attempt_frequency_hz": 5000000000000.0,
+    "supercell_shape": [8, 8, 8],
+    "equilibration_passes": 1,
+    "measurement_passes": 30,
+    "paired_random_seeds": [104729, 130363, 155921]
+  },
+  "recorded_outputs": [
+    "per-pass simulated time",
+    "collective diffusivity D_J",
+    "tracer diffusivity",
+    "conductivity",
+    "Haven ratio",
+    "single-ion correlation factor",
+    "mean squared displacement"
+  ],
+  "feasibility_rule": "pass only if all six requested runs complete and every final simulated time, D_J, tracer diffusivity, conductivity, and MSD is finite with positive simulated time",
+  "analysis_policy": "Report paired per-seed ratios, medians, ranges, and trajectory curves. Do not change seeds, pass count, pair, or endpoint after inspection.",
+  "interpretation_boundary": "Thirty measurement passes are 1% of the source paper's 3,000-pass setting. This pilot cannot establish converged conductivity, Haven ratio, mechanism, or experimental transfer; it only informs whether a production run is computationally and numerically viable.",
+  "sealed_test_interaction": "This pilot does not access or alter the paper-level sealed benchmark test."
+}

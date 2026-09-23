@@ -1,0 +1,74 @@
+{
+  "schema_version": "arc-nasicon-extended-kmc-contract-0.2",
+  "result_schema_version": "arc-nasicon-extended-kmc-result-0.2",
+  "frozen_at_local_date": "2026-09-18",
+  "purpose": "prospective extension after the v0.1 source-length study failed its frozen convergence and directional-confirmation rules",
+  "amendment_provenance": {
+    "immutable_predecessor_contract": "experiments/nasicon_production_kmc_contract_v0.1.json",
+    "immutable_predecessor_result": "results/nasicon_production_kmc_v0.1.json",
+    "retrospective_design_diagnostic": "results/nasicon_convergence_sensitivity_v0.1.json",
+    "reason_for_amendment": "at pass 3000 the 250-pass window passed 6/6 runs, while the 500, 750, and 1000-pass windows passed 5/6, 2/6, and 1/6; shortening the window would create an unstable success criterion",
+    "predecessor_verdict_remains": "v0.1 study convergence and conditional directional confirmation both failed and are not replaced by v0.2"
+  },
+  "upstream_commit": "69eb10b7c52ddd85e39ebeb882b2e4ea617e7770",
+  "pair_provenance": {
+    "heldout_result": "results/nasicon_heldout_composition_scan_v0.1.json",
+    "composition_parameter_comp": 0.9,
+    "paper_formula_x": 0.3,
+    "structure_indices": [10, 41],
+    "high_initial_rate_structure": 41,
+    "low_initial_rate_structure": 10,
+    "selection_rule": "unchanged from v0.1: maximum nonnegative-barrier aggregate-rate ratio within the frozen 0.25 meV mean-barrier tolerance at comp=0.9",
+    "initial_rate_ratio_high_over_low": 12.779522366297947,
+    "mean_barrier_difference_mev": 0.03627188205780385
+  },
+  "simulation": {
+    "temperature_k": 573,
+    "attempt_frequency_hz": 5000000000000.0,
+    "supercell_shape": [8, 8, 8],
+    "equilibration_passes": 1,
+    "measurement_passes": 6000,
+    "paired_random_seeds": [104729, 130363, 155921],
+    "checkpoint_every_passes": 50,
+    "restart_policy": "rerun every seed-structure shard from initialization; do not resume selectively from v0.1"
+  },
+  "primary_endpoint": {
+    "name": "late_window_median_conductivity_mS_cm",
+    "window_passes": 1000,
+    "paired_contrast": "high_initial_rate_structure divided by low_initial_rate_structure within seed",
+    "directional_confirmation_rule": "all three paired ratios exceed 1 only after both runs in every pair pass the v0.2 convergence gate"
+  },
+  "convergence_gate": {
+    "windows": {
+      "late": [5001, 6000],
+      "preceding": [4001, 5000]
+    },
+    "metrics": {
+      "conductivity": {"max_relative_median_drift": 0.15},
+      "D_J": {"max_relative_median_drift": 0.15},
+      "D_tracer": {"max_relative_median_drift": 0.15},
+      "H_R": {"max_relative_median_drift": 0.20}
+    },
+    "relative_drift_definition": "absolute difference between late and preceding window medians divided by max(abs(late median), 1e-30)",
+    "run_pass_rule": "all four metrics are finite throughout both 1000-pass windows and satisfy their frozen drift threshold",
+    "pair_pass_rule": "both structure runs for a seed pass",
+    "study_pass_rule": "all six runs and all three seed pairs pass",
+    "diagnostic_only_window_passes": [500, 1500],
+    "diagnostic_only_rule": "report but never substitute these windows for the frozen 1000-pass gate"
+  },
+  "reporting_policy": [
+    "retain and cite the failed v0.1 result alongside v0.2",
+    "retain all v0.2 seeds, direction reversals, non-finite values, and failed convergence gates",
+    "report per-pass curves and all frozen window medians for every run",
+    "report paired ratios individually; three seeds do not justify asymptotic significance claims",
+    "do not describe a failed directional rule as evidence of equal conductivity",
+    "do not choose a diagnostic-only window after observing outcomes"
+  ],
+  "resource_budget": {
+    "measured_v0_1_core_hours_for_six_3000_pass_runs": 7.016,
+    "projected_v0_2_core_hours_for_six_6000_pass_runs": 14.1,
+    "projected_parallel_wall_hours_with_six_processes": 2.4
+  },
+  "interpretation_boundary": "This extension can test convergence and transport ordering inside the pinned fitted kMC model. It cannot identify a physical mechanism, validate the fitted energy landscape, establish population-level generality, or establish experimental pellet conductivity.",
+  "sealed_test_interaction": "This extension does not access or alter the paper-level sealed claim benchmark."
+}

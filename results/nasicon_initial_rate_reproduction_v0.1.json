@@ -1,0 +1,139 @@
+{
+  "schema_version": "arc-external-reproduction-1.0",
+  "upstream_repository": "https://github.com/caneparesearch/NASICON_KMC_paper_data",
+  "upstream_commit": "69eb10b7c52ddd85e39ebeb882b2e4ea617e7770",
+  "paper_doi": "10.1038/s41467-022-32190-7",
+  "scope": "Deterministic initialization of the public kMC event catalogue for all 50 supplied 8x8x8 configurations at one composition and temperature, followed by an explicitly exploratory pair scan; no stochastic trajectory or macroscopic conductivity is computed.",
+  "inputs": {
+    "composition_parameter_comp": 0.2,
+    "paper_formula_x": 2.4,
+    "formula_na_content": 3.4,
+    "structure_indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "temperature_k": 573,
+    "attempt_frequency_hz": 5000000000000.0,
+    "supercell_shape": [
+      8,
+      8,
+      8
+    ],
+    "sha256": {
+      "inputs/prim.json": "a1206dbd07f542526b20cc4fa31710fe6237ddff2575a28ccca29bbf609bf6ec",
+      "inputs/fitting_results.pkl": "a3a7a86cd80aa94600bf34460f4ad8d7206a2c2179fe5e4fbbf85d1a0d39da57",
+      "inputs/fitting_results_site.pkl": "04020e963082338b30b19aac03300b287e730afd92efe77f6f5738dab8811c42",
+      "inputs/events_888_site.pkl": "5c05541ab900c6806dcf7873833f4375492eae19d8ecf96b1293e13a6076ff0e",
+      "inputs/lce.pkl": "44ea7a722b043fc925a79afe7d2ff74775b1c95aa2532163152d96eb81a5ed58",
+      "inputs/lce_site.pkl": "efac7e45e14d386c440c5812216e22644e58f0b0cea44ba978f7ee4190247338",
+      "kmc/mc_results.h5": "a367c0b18b2492318b607ae792094b8338ba2bc721ebe59f669094424b146226",
+      "lib/kmc.py": "26f217c92a19881ca0294dda63cfd4b42008ac045ae0917a1597c7aff74f6813",
+      "lib/model.py": "da8cfffecc1b1a6baca39ab4c34996cc4439d67633b7eb96cff05eefeb87773f"
+    }
+  },
+  "package_versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "tables": "3.10.1",
+    "pymatgen": "2025.10.7",
+    "numba": "0.67.0"
+  },
+  "configuration_scan": {
+    "configuration_count": 50,
+    "all_pair_count": 1225,
+    "pairs_within_declared_mean_barrier_tolerance": 14,
+    "selection_status": "exploratory_post_hoc",
+    "selection_rule": "largest aggregate initial-rate ratio among all configuration pairs within 0.25 meV in mean active-event barrier",
+    "mean_barrier_range_mev": [
+      283.2945221904597,
+      333.89158612791505
+    ],
+    "aggregate_initial_rate_range_hz": [
+      2138663665237110.5,
+      4567894850357293.0
+    ]
+  },
+  "selected_configuration_summaries": [
+    {
+      "structure_index": 48,
+      "active_directed_event_count": 1702,
+      "mean_active_barrier_mev": 317.09445540244076,
+      "median_active_barrier_mev": 326.1658285501836,
+      "standard_deviation_active_barrier_mev": 213.91724300047477,
+      "minimum_active_barrier_mev": -189.29162939951019,
+      "maximum_active_barrier_mev": 844.6831871584841,
+      "aggregate_initial_hopping_rate_hz": 3986628755072767.5,
+      "median_initial_hopping_rate_hz": 6763992464.65562,
+      "maximum_initial_hopping_rate_hz": 231137398896798.44
+    },
+    {
+      "structure_index": 49,
+      "active_directed_event_count": 1588,
+      "mean_active_barrier_mev": 316.8863024300498,
+      "median_active_barrier_mev": 336.1621059857067,
+      "standard_deviation_active_barrier_mev": 211.95250660523698,
+      "minimum_active_barrier_mev": -189.29162939951019,
+      "maximum_active_barrier_mev": 1050.6838079862023,
+      "aggregate_initial_hopping_rate_hz": 2675729937419209.0,
+      "median_initial_hopping_rate_hz": 5524355427.554855,
+      "maximum_initial_hopping_rate_hz": 231137398896798.44
+    }
+  ],
+  "comparison": {
+    "absolute_mean_barrier_difference_mev": 0.20815297239096253,
+    "declared_observational_tolerance_mev": 0.25,
+    "mean_barriers_equivalent_at_declared_tolerance": true,
+    "aggregate_initial_rate_ratio": 1.4899219459038324,
+    "aggregate_initial_rate_relative_difference": 0.48992194590383237
+  },
+  "runtime_seconds": 9.94062208399555,
+  "interpretation_boundary": "Near-equality of a mean barrier does not identify the aggregate initial event rate because event count and the full barrier distribution enter the Arrhenius sum. The displayed pair was selected exploratorily after scanning all 50 configurations and requires confirmation on held-out configurations. This result alone neither estimates conductivity nor tests the paper's full kMC and experimental conclusions."
+}

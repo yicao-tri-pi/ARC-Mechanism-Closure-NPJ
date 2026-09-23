@@ -1,0 +1,71 @@
+{
+  "schema_version": "arc-remote-execution-receipt-0.1",
+  "completed_at_utc": "2026-09-19T03:08:24Z",
+  "remote_host_alias": "kozo-dev-yi",
+  "remote_platform": "Linux 5.15.0-1061-aws x86_64",
+  "remote_logical_cpus": 64,
+  "remote_memory_bytes": 267406159872,
+  "remote_run_root": "/tmp/arc_nasicon_smoke.48j5iI",
+  "processes": 1,
+  "upstream_repository": "https://github.com/caneparesearch/NASICON_KMC_paper_data",
+  "upstream_commit": "69eb10b7c52ddd85e39ebeb882b2e4ea617e7770",
+  "source_tree_note": "The shallow clone matched the expected commit. Runtime-created Python bytecode was untracked; source and declared input files were unchanged.",
+  "command": [
+    "/usr/bin/time",
+    "-v",
+    "env/bin/python",
+    "run_nasicon_kmc_smoke.py",
+    "--upstream-root",
+    "NASICON_KMC_paper_data",
+    "--output",
+    "nasicon_kmc_smoke_result_v0.1.json",
+    "--composition",
+    "0.2",
+    "--structure-indices",
+    "48",
+    "49",
+    "--temperature",
+    "573",
+    "--seed",
+    "20260918",
+    "--equilibration-passes",
+    "1",
+    "--measurement-passes",
+    "3"
+  ],
+  "exit_status": 0,
+  "wall_seconds": 20.03,
+  "maximum_resident_set_kib": 429884,
+  "environment": {
+    "python": "3.10.21",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "tables": "3.10.1",
+    "h5py": "3.16.0",
+    "scipy": "1.15.3",
+    "pymatgen": "2025.10.7",
+    "numba": "0.62.1"
+  },
+  "artifact_sha256": {
+    "experiments/nasicon_kmc_smoke_contract_v0.1.json": "db663202a859e8ebc4d9b93a45e8ffbd6e665b8fad2d39a66b253a882aed94e2",
+    "scripts/run_nasicon_kmc_smoke.py": "b28316d40cf50e6d4a2a4e010c82aacc2e2fb5cef931ccfd78cd634fc1dbc86c",
+    "results/nasicon_kmc_smoke_remote_v0.1.json": "cb72c39c91ed3962f5dfa94330b49c730cd1379e0e5608d134315d5e81293268",
+    "results/nasicon_kmc_smoke_remote_resource_v0.1.txt": "787f467dccd01a8a83851f3ba2061f71da9c6fab41791d7b3f273e2fd62d9d57"
+  },
+  "input_identity_check": {
+    "shared_hashes_compared_with_heldout_scan": 9,
+    "all_shared_hashes_match": true,
+    "smoke_only_required_input": "inputs/event_kernal_888.csv"
+  },
+  "result": {
+    "all_smoke_gates_pass": true,
+    "structures_completed": 2,
+    "measurement_summaries_per_structure": 3,
+    "attempted_kmc_events_per_structure": 16384,
+    "naive_3000_measurement_pass_projection_hours_range": [
+      2.4615503268109427,
+      2.8079784301937454
+    ]
+  },
+  "interpretation_boundary": "Implementation and artifact completeness only. The three-pass transport metrics and instantaneous graph summaries are not converged scientific estimates."
+}

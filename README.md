@@ -33,6 +33,28 @@ physical mechanism or prove that the encoded model describes the world.
   cross-paper data interface;
 - `docs/coordination/`: internal Hisa review packet and unsent response draft.
 
+## Evidence package
+
+The repository now contains the previously completed scientific artifacts,
+organized without changing their original executable paths:
+
+- `docs/cases/nasicon.md`: contracts, public kMC inputs, raw trajectory shards,
+  aggregate results, figures, Lean certificate, and bounded interpretation;
+- `docs/cases/nleis.md`: all 30 public paired EIS/NLEIS spectra, the frozen
+  multistart contract, aggregate and checkpoint results, figures, and Lean
+  parity certificate;
+- `docs/cases/polymer_wang2012.md`: the Wang Axis-1 predictive contract,
+  literature/model audit, executable fitter, formal countermodels, and the
+  exact empirical blocker;
+- `provenance/migration_manifest.json`: SHA-256 inventory and source-state
+  declaration for the imported files;
+- `third_party/README.md`: upstream repositories, immutable commits, licenses,
+  and the policy for source papers that are not redistributed here.
+
+Run `python scripts/validate_evidence_package.py` for a non-destructive
+integrity check. The large simulations and multistart fits are intentionally
+not rerun by this validator.
+
 ## Repository boundary
 
 This repository has a clean history and is not a fork of
@@ -41,5 +63,5 @@ only through explicit, hash-recorded provenance. The upstream development
 repository remains a historical source for selected NASICON and NLEIS
 artifacts; it is not the publication repository for this paper.
 
-The repository is local-only until its matching GitHub repository is created.
-
+The publication repository is
+`https://github.com/yicao-tri/ARC-Mechanism-Closure-NPJ`.

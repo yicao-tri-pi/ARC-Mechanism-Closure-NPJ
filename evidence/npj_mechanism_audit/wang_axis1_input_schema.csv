@@ -1,0 +1,2 @@
+material,T_K,sigma_s_cm,tau_s_s,primary_window,sigma_log_se,tau_log_se,cov_log_sigma_tau
+EXAMPLE_ONLY_DELETE_BEFORE_ANALYSIS,300,1e-6,1e-2,false,,,

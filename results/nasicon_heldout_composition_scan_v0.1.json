@@ -1,0 +1,445 @@
+{
+  "schema_version": "arc-nasicon-heldout-result-0.1",
+  "contract_path": "experiments/nasicon_heldout_contract_v0.1.json",
+  "contract_sha256": "7e355cc46d61c17b3b67d63a0d3975e3d109d7ebc5be83abeb74c42cdbebd694",
+  "upstream_commit": "69eb10b7c52ddd85e39ebeb882b2e4ea617e7770",
+  "input_sha256": {
+    "inputs/prim.json": "a1206dbd07f542526b20cc4fa31710fe6237ddff2575a28ccca29bbf609bf6ec",
+    "inputs/fitting_results.pkl": "a3a7a86cd80aa94600bf34460f4ad8d7206a2c2179fe5e4fbbf85d1a0d39da57",
+    "inputs/fitting_results_site.pkl": "04020e963082338b30b19aac03300b287e730afd92efe77f6f5738dab8811c42",
+    "inputs/events_888_site.pkl": "5c05541ab900c6806dcf7873833f4375492eae19d8ecf96b1293e13a6076ff0e",
+    "inputs/lce.pkl": "44ea7a722b043fc925a79afe7d2ff74775b1c95aa2532163152d96eb81a5ed58",
+    "inputs/lce_site.pkl": "efac7e45e14d386c440c5812216e22644e58f0b0cea44ba978f7ee4190247338",
+    "kmc/mc_results.h5": "a367c0b18b2492318b607ae792094b8338ba2bc721ebe59f669094424b146226",
+    "lib/kmc.py": "26f217c92a19881ca0294dda63cfd4b42008ac045ae0917a1597c7aff74f6813",
+    "lib/model.py": "da8cfffecc1b1a6baca39ab4c34996cc4439d67633b7eb96cff05eefeb87773f"
+  },
+  "package_versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "tables": "3.10.1",
+    "pymatgen": "2025.10.7",
+    "numba": "0.67.0"
+  },
+  "composition_results": [
+    {
+      "composition_parameter_comp": 0.001,
+      "paper_formula_x": 2.997,
+      "formula_na_content": 3.997,
+      "negative_directional_rate_fraction_range": [
+        0.0,
+        0.0
+      ],
+      "mean_ekra_to_full_rate": {
+        "matched_pair_count": 423,
+        "pairs_meeting_rate_ratio_threshold": 0,
+        "fraction_meeting_rate_ratio_threshold": 0.0,
+        "maximum_rate_ratio": 1.0,
+        "maximum_ratio_pair": {
+          "left_structure_index": 1,
+          "right_structure_index": 2,
+          "observable_absolute_difference_mev": 0.0,
+          "target_rate_ratio": 1.0
+        }
+      },
+      "nonnegative_directional_barrier": {
+        "matched_pair_count": 423,
+        "pairs_meeting_rate_ratio_threshold": 0,
+        "fraction_meeting_rate_ratio_threshold": 0.0,
+        "maximum_rate_ratio": 1.0,
+        "maximum_ratio_pair": {
+          "left_structure_index": 1,
+          "right_structure_index": 2,
+          "observable_absolute_difference_mev": 0.0,
+          "target_rate_ratio": 1.0
+        }
+      }
+    },
+    {
+      "composition_parameter_comp": 0.01,
+      "paper_formula_x": 2.97,
+      "formula_na_content": 3.97,
+      "negative_directional_rate_fraction_range": [
+        0.0,
+        0.8120389925893052
+      ],
+      "mean_ekra_to_full_rate": {
+        "matched_pair_count": 21,
+        "pairs_meeting_rate_ratio_threshold": 11,
+        "fraction_meeting_rate_ratio_threshold": 0.5238095238095238,
+        "maximum_rate_ratio": 2.69239739200305,
+        "maximum_ratio_pair": {
+          "left_structure_index": 10,
+          "right_structure_index": 16,
+          "observable_absolute_difference_mev": 0.017361808082313246,
+          "target_rate_ratio": 2.69239739200305
+        }
+      },
+      "nonnegative_directional_barrier": {
+        "matched_pair_count": 6,
+        "pairs_meeting_rate_ratio_threshold": 3,
+        "fraction_meeting_rate_ratio_threshold": 0.5,
+        "maximum_rate_ratio": 1.4582896009065793,
+        "maximum_ratio_pair": {
+          "left_structure_index": 2,
+          "right_structure_index": 11,
+          "observable_absolute_difference_mev": 0.1872056454986648,
+          "target_rate_ratio": 1.4582896009065793
+        }
+      }
+    },
+    {
+      "composition_parameter_comp": 0.1,
+      "paper_formula_x": 2.7,
+      "formula_na_content": 3.7,
+      "negative_directional_rate_fraction_range": [
+        0.3597938419896019,
+        0.8664523349358546
+      ],
+      "mean_ekra_to_full_rate": {
+        "matched_pair_count": 26,
+        "pairs_meeting_rate_ratio_threshold": 16,
+        "fraction_meeting_rate_ratio_threshold": 0.6153846153846154,
+        "maximum_rate_ratio": 2.150495619245608,
+        "maximum_ratio_pair": {
+          "left_structure_index": 3,
+          "right_structure_index": 45,
+          "observable_absolute_difference_mev": 0.15848032195921746,
+          "target_rate_ratio": 2.150495619245608
+        }
+      },
+      "nonnegative_directional_barrier": {
+        "matched_pair_count": 17,
+        "pairs_meeting_rate_ratio_threshold": 4,
+        "fraction_meeting_rate_ratio_threshold": 0.23529411764705882,
+        "maximum_rate_ratio": 1.3244216943821996,
+        "maximum_ratio_pair": {
+          "left_structure_index": 2,
+          "right_structure_index": 24,
+          "observable_absolute_difference_mev": 0.013930221837142653,
+          "target_rate_ratio": 1.3244216943821996
+        }
+      }
+    },
+    {
+      "composition_parameter_comp": 0.3,
+      "paper_formula_x": 2.1,
+      "formula_na_content": 3.1,
+      "negative_directional_rate_fraction_range": [
+        0.6766077208082207,
+        0.8695786556788659
+      ],
+      "mean_ekra_to_full_rate": {
+        "matched_pair_count": 39,
+        "pairs_meeting_rate_ratio_threshold": 11,
+        "fraction_meeting_rate_ratio_threshold": 0.28205128205128205,
+        "maximum_rate_ratio": 1.660666523692607,
+        "maximum_ratio_pair": {
+          "left_structure_index": 7,
+          "right_structure_index": 20,
+          "observable_absolute_difference_mev": 0.09592114144589914,
+          "target_rate_ratio": 1.660666523692607
+        }
+      },
+      "nonnegative_directional_barrier": {
+        "matched_pair_count": 40,
+        "pairs_meeting_rate_ratio_threshold": 9,
+        "fraction_meeting_rate_ratio_threshold": 0.225,
+        "maximum_rate_ratio": 1.3794367285888558,
+        "maximum_ratio_pair": {
+          "left_structure_index": 26,
+          "right_structure_index": 41,
+          "observable_absolute_difference_mev": 0.02428939006819064,
+          "target_rate_ratio": 1.3794367285888558
+        }
+      }
+    },
+    {
+      "composition_parameter_comp": 0.4,
+      "paper_formula_x": 1.7999999999999998,
+      "formula_na_content": 2.8,
+      "negative_directional_rate_fraction_range": [
+        0.6378140080713272,
+        0.8492791286051392
+      ],
+      "mean_ekra_to_full_rate": {
+        "matched_pair_count": 44,
+        "pairs_meeting_rate_ratio_threshold": 21,
+        "fraction_meeting_rate_ratio_threshold": 0.4772727272727273,
+        "maximum_rate_ratio": 2.035102273984968,
+        "maximum_ratio_pair": {
+          "left_structure_index": 27,
+          "right_structure_index": 35,
+          "observable_absolute_difference_mev": 0.1883542717745854,
+          "target_rate_ratio": 2.035102273984968
+        }
+      },
+      "nonnegative_directional_barrier": {
+        "matched_pair_count": 25,
+        "pairs_meeting_rate_ratio_threshold": 12,
+        "fraction_meeting_rate_ratio_threshold": 0.48,
+        "maximum_rate_ratio": 1.5672415244729458,
+        "maximum_ratio_pair": {
+          "left_structure_index": 29,
+          "right_structure_index": 36,
+          "observable_absolute_difference_mev": 0.06923249675986654,
+          "target_rate_ratio": 1.5672415244729458
+        }
+      }
+    },
+    {
+      "composition_parameter_comp": 0.5,
+      "paper_formula_x": 1.5,
+      "formula_na_content": 2.5,
+      "negative_directional_rate_fraction_range": [
+        0.33597871980387106,
+        0.8754287370514298
+      ],
+      "mean_ekra_to_full_rate": {
+        "matched_pair_count": 54,
+        "pairs_meeting_rate_ratio_threshold": 34,
+        "fraction_meeting_rate_ratio_threshold": 0.6296296296296297,
+        "maximum_rate_ratio": 2.5963557577542615,
+        "maximum_ratio_pair": {
+          "left_structure_index": 7,
+          "right_structure_index": 44,
+          "observable_absolute_difference_mev": 0.11941566834462947,
+          "target_rate_ratio": 2.5963557577542615
+        }
+      },
+      "nonnegative_directional_barrier": {
+        "matched_pair_count": 34,
+        "pairs_meeting_rate_ratio_threshold": 19,
+        "fraction_meeting_rate_ratio_threshold": 0.5588235294117647,
+        "maximum_rate_ratio": 1.6578531832253607,
+        "maximum_ratio_pair": {
+          "left_structure_index": 18,
+          "right_structure_index": 48,
+          "observable_absolute_difference_mev": 0.06149318635596046,
+          "target_rate_ratio": 1.6578531832253607
+        }
+      }
+    },
+    {
+      "composition_parameter_comp": 0.6,
+      "paper_formula_x": 1.2000000000000002,
+      "formula_na_content": 2.2,
+      "negative_directional_rate_fraction_range": [
+        0.32780196007644036,
+        0.9042080327499282
+      ],
+      "mean_ekra_to_full_rate": {
+        "matched_pair_count": 137,
+        "pairs_meeting_rate_ratio_threshold": 92,
+        "fraction_meeting_rate_ratio_threshold": 0.6715328467153284,
+        "maximum_rate_ratio": 5.546702892830035,
+        "maximum_ratio_pair": {
+          "left_structure_index": 32,
+          "right_structure_index": 45,
+          "observable_absolute_difference_mev": 0.21572741223650382,
+          "target_rate_ratio": 5.546702892830035
+        }
+      },
+      "nonnegative_directional_barrier": {
+        "matched_pair_count": 34,
+        "pairs_meeting_rate_ratio_threshold": 18,
+        "fraction_meeting_rate_ratio_threshold": 0.5294117647058824,
+        "maximum_rate_ratio": 1.9428396698497743,
+        "maximum_ratio_pair": {
+          "left_structure_index": 15,
+          "right_structure_index": 26,
+          "observable_absolute_difference_mev": 0.11721484150257311,
+          "target_rate_ratio": 1.9428396698497743
+        }
+      }
+    },
+    {
+      "composition_parameter_comp": 0.7,
+      "paper_formula_x": 0.9000000000000004,
+      "formula_na_content": 1.9000000000000004,
+      "negative_directional_rate_fraction_range": [
+        0.0,
+        0.9286643914162948
+      ],
+      "mean_ekra_to_full_rate": {
+        "matched_pair_count": 123,
+        "pairs_meeting_rate_ratio_threshold": 101,
+        "fraction_meeting_rate_ratio_threshold": 0.8211382113821138,
+        "maximum_rate_ratio": 14.897930822464437,
+        "maximum_ratio_pair": {
+          "left_structure_index": 10,
+          "right_structure_index": 48,
+          "observable_absolute_difference_mev": 0.2343727277981884,
+          "target_rate_ratio": 14.897930822464437
+        }
+      },
+      "nonnegative_directional_barrier": {
+        "matched_pair_count": 52,
+        "pairs_meeting_rate_ratio_threshold": 36,
+        "fraction_meeting_rate_ratio_threshold": 0.6923076923076923,
+        "maximum_rate_ratio": 2.870745780768235,
+        "maximum_ratio_pair": {
+          "left_structure_index": 13,
+          "right_structure_index": 20,
+          "observable_absolute_difference_mev": 0.025401207471873022,
+          "target_rate_ratio": 2.870745780768235
+        }
+      }
+    },
+    {
+      "composition_parameter_comp": 0.8,
+      "paper_formula_x": 0.5999999999999996,
+      "formula_na_content": 1.5999999999999996,
+      "negative_directional_rate_fraction_range": [
+        0.0,
+        0.7515513954672259
+      ],
+      "mean_ekra_to_full_rate": {
+        "matched_pair_count": 169,
+        "pairs_meeting_rate_ratio_threshold": 131,
+        "fraction_meeting_rate_ratio_threshold": 0.7751479289940828,
+        "maximum_rate_ratio": 26.923864241546294,
+        "maximum_ratio_pair": {
+          "left_structure_index": 10,
+          "right_structure_index": 13,
+          "observable_absolute_difference_mev": 0.13957747555980404,
+          "target_rate_ratio": 26.923864241546294
+        }
+      },
+      "nonnegative_directional_barrier": {
+        "matched_pair_count": 73,
+        "pairs_meeting_rate_ratio_threshold": 56,
+        "fraction_meeting_rate_ratio_threshold": 0.7671232876712328,
+        "maximum_rate_ratio": 5.07451924768334,
+        "maximum_ratio_pair": {
+          "left_structure_index": 13,
+          "right_structure_index": 44,
+          "observable_absolute_difference_mev": 0.0007841617905910425,
+          "target_rate_ratio": 5.07451924768334
+        }
+      }
+    },
+    {
+      "composition_parameter_comp": 0.9,
+      "paper_formula_x": 0.2999999999999998,
+      "formula_na_content": 1.2999999999999998,
+      "negative_directional_rate_fraction_range": [
+        0.0,
+        0.0
+      ],
+      "mean_ekra_to_full_rate": {
+        "matched_pair_count": 301,
+        "pairs_meeting_rate_ratio_threshold": 226,
+        "fraction_meeting_rate_ratio_threshold": 0.7508305647840532,
+        "maximum_rate_ratio": 14.929836308176014,
+        "maximum_ratio_pair": {
+          "left_structure_index": 4,
+          "right_structure_index": 16,
+          "observable_absolute_difference_mev": 0.15634416088744274,
+          "target_rate_ratio": 14.929836308176014
+        }
+      },
+      "nonnegative_directional_barrier": {
+        "matched_pair_count": 173,
+        "pairs_meeting_rate_ratio_threshold": 146,
+        "fraction_meeting_rate_ratio_threshold": 0.8439306358381503,
+        "maximum_rate_ratio": 12.779522366297947,
+        "maximum_ratio_pair": {
+          "left_structure_index": 10,
+          "right_structure_index": 41,
+          "observable_absolute_difference_mev": 0.03627188205780385,
+          "target_rate_ratio": 12.779522366297947
+        }
+      }
+    },
+    {
+      "composition_parameter_comp": 0.99,
+      "paper_formula_x": 0.03000000000000025,
+      "formula_na_content": 1.0300000000000002,
+      "negative_directional_rate_fraction_range": [
+        0.0,
+        0.0
+      ],
+      "mean_ekra_to_full_rate": {
+        "matched_pair_count": 837,
+        "pairs_meeting_rate_ratio_threshold": 594,
+        "fraction_meeting_rate_ratio_threshold": 0.7096774193548387,
+        "maximum_rate_ratio": 4.885126748247047,
+        "maximum_ratio_pair": {
+          "left_structure_index": 11,
+          "right_structure_index": 29,
+          "observable_absolute_difference_mev": 0.24743229866035676,
+          "target_rate_ratio": 4.885126748247047
+        }
+      },
+      "nonnegative_directional_barrier": {
+        "matched_pair_count": 483,
+        "pairs_meeting_rate_ratio_threshold": 356,
+        "fraction_meeting_rate_ratio_threshold": 0.7370600414078675,
+        "maximum_rate_ratio": 4.840601330505228,
+        "maximum_ratio_pair": {
+          "left_structure_index": 7,
+          "right_structure_index": 11,
+          "observable_absolute_difference_mev": 0.20669528813635907,
+          "target_rate_ratio": 4.840601330505228
+        }
+      }
+    },
+    {
+      "composition_parameter_comp": 0.999,
+      "paper_formula_x": 0.0030000000000001137,
+      "formula_na_content": 1.0030000000000001,
+      "negative_directional_rate_fraction_range": [
+        0.0,
+        0.0
+      ],
+      "mean_ekra_to_full_rate": {
+        "matched_pair_count": 809,
+        "pairs_meeting_rate_ratio_threshold": 582,
+        "fraction_meeting_rate_ratio_threshold": 0.7194066749072929,
+        "maximum_rate_ratio": 3.9362706117109516,
+        "maximum_ratio_pair": {
+          "left_structure_index": 7,
+          "right_structure_index": 34,
+          "observable_absolute_difference_mev": 0.018016677200904496,
+          "target_rate_ratio": 3.9362706117109516
+        }
+      },
+      "nonnegative_directional_barrier": {
+        "matched_pair_count": 508,
+        "pairs_meeting_rate_ratio_threshold": 379,
+        "fraction_meeting_rate_ratio_threshold": 0.7460629921259843,
+        "maximum_rate_ratio": 3.9229137893710715,
+        "maximum_ratio_pair": {
+          "left_structure_index": 7,
+          "right_structure_index": 42,
+          "observable_absolute_difference_mev": 0.17357599856501338,
+          "target_rate_ratio": 3.9229137893710715
+        }
+      }
+    }
+  ],
+  "channel_summary": {
+    "mean_ekra_to_full_rate": {
+      "compositions_with_matched_pairs": 12,
+      "compositions_meeting_rate_ratio_threshold": 11,
+      "pooled_matched_pair_count": 2983,
+      "pooled_pairs_meeting_rate_ratio_threshold": 1819,
+      "pooled_fraction_meeting_rate_ratio_threshold": 0.6097888032182367
+    },
+    "nonnegative_directional_barrier": {
+      "compositions_with_matched_pairs": 12,
+      "compositions_meeting_rate_ratio_threshold": 11,
+      "pooled_matched_pair_count": 1868,
+      "pooled_pairs_meeting_rate_ratio_threshold": 1038,
+      "pooled_fraction_meeting_rate_ratio_threshold": 0.5556745182012848
+    }
+  },
+  "confirmation": {
+    "mean_ekra_to_full_rate_pass": true,
+    "nonnegative_directional_barrier_pass": true,
+    "joint_rule_pass": true
+  },
+  "runtime_seconds": 116.68303045799985,
+  "interpretation_boundary": "Passing confirms recurrence only within the supplied initial-configuration corpus. It does not establish long-time diffusion, conductivity, causal mechanism, or transfer to experimental pellets."
+}

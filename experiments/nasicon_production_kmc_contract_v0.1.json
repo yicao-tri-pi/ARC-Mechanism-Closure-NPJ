@@ -1,0 +1,57 @@
+{
+  "schema_version": "arc-nasicon-production-kmc-contract-0.1",
+  "frozen_at_local_date": "2026-09-18",
+  "purpose": "source-length paired-seed test of whether a large initial event-rate difference persists as a stable long-time conductivity difference",
+  "upstream_commit": "69eb10b7c52ddd85e39ebeb882b2e4ea617e7770",
+  "pair_provenance": {
+    "heldout_result": "results/nasicon_heldout_composition_scan_v0.1.json",
+    "short_pilot_result": "results/nasicon_short_kmc_pilot_v0.1.json",
+    "composition_parameter_comp": 0.9,
+    "paper_formula_x": 0.3,
+    "structure_indices": [10, 41],
+    "high_initial_rate_structure": 41,
+    "low_initial_rate_structure": 10,
+    "selection_rule": "maximum nonnegative-barrier aggregate-rate ratio within the frozen 0.25 meV mean-barrier tolerance at comp=0.9",
+    "initial_rate_ratio_high_over_low": 12.779522366297947,
+    "mean_barrier_difference_mev": 0.03627188205780385
+  },
+  "simulation": {
+    "temperature_k": 573,
+    "attempt_frequency_hz": 5000000000000.0,
+    "supercell_shape": [8, 8, 8],
+    "equilibration_passes": 1,
+    "measurement_passes": 3000,
+    "paired_random_seeds": [104729, 130363, 155921],
+    "checkpoint_every_passes": 25
+  },
+  "primary_endpoint": {
+    "name": "late_window_median_conductivity_mS_cm",
+    "window_passes": 500,
+    "paired_contrast": "high_initial_rate_structure divided by low_initial_rate_structure within seed",
+    "directional_confirmation_rule": "all three paired ratios exceed 1 only after both runs in every pair pass the convergence gate"
+  },
+  "convergence_gate": {
+    "windows": {
+      "late": [2501, 3000],
+      "preceding": [2001, 2500]
+    },
+    "metrics": {
+      "conductivity": {"max_relative_median_drift": 0.15},
+      "D_J": {"max_relative_median_drift": 0.15},
+      "D_tracer": {"max_relative_median_drift": 0.15},
+      "H_R": {"max_relative_median_drift": 0.20}
+    },
+    "relative_drift_definition": "absolute difference between late and preceding window medians divided by max(abs(late median), 1e-30)",
+    "run_pass_rule": "all four metrics are finite throughout both windows and satisfy their frozen drift threshold",
+    "pair_pass_rule": "both structure runs for a seed pass",
+    "study_pass_rule": "all six runs and all three seed pairs pass"
+  },
+  "reporting_policy": [
+    "retain all seeds, direction reversals, non-finite values, and failed convergence gates",
+    "report per-pass curves and both frozen window medians for every run",
+    "report paired ratios individually; three seeds do not justify asymptotic significance claims",
+    "a failed convergence gate is an informative underdetermined result, not an exclusion criterion"
+  ],
+  "interpretation_boundary": "This experiment can test transport separation inside the pinned fitted kMC model. It cannot by itself identify the physical mechanism, validate the fitted energy landscape, or establish experimental pellet conductivity.",
+  "sealed_test_interaction": "This production run does not access or alter the paper-level sealed claim benchmark."
+}

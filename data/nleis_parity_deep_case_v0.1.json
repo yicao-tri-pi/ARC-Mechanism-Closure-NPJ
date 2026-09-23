@@ -1,0 +1,125 @@
+{
+  "schema_version": "arc-identifiability-0.1",
+  "label_status": "system_deep_case_not_expert_gold",
+  "case_policy": "This candidate audits a deliberately scoped two-electrode parity model. It does not claim that every EIS equivalent circuit is non-identifiable or that the source authors overclaimed their results.",
+  "claims": [
+    {
+      "claim_id": "JI-2023-LINEAR-EIS-ELECTRODE-ALLOCATION",
+      "title": "Linear full-cell EIS alone uniquely allocates electrode contributions",
+      "domain": "electrochemical impedance and lithium-ion batteries",
+      "claim_type": "mechanistic",
+      "claim_text": "Within the declared two-electrode additive model, a full-cell linear EIS observation uniquely identifies the separate positive- and negative-electrode contributions.",
+      "query_scope": "the sum-versus-difference measurement structure described by the 2nd-NLEIS work; practical noise, broader circuit families, and general battery causality are outside the formal witness",
+      "assumptions": [
+        "the linear full-cell observable is the sum of the two electrode contributions",
+        "the second-harmonic observable has opposite parity and is their difference",
+        "the scalar witness represents one frequency or one declared feature of the spectrum",
+        "both witness allocations are admissible in the scoped model class"
+      ],
+      "observed_variables": [
+        "linear_full_cell_eis_sum"
+      ],
+      "target_variables": [
+        "electrode_specific_allocation",
+        "second_harmonic_difference"
+      ],
+      "required_measurements": [
+        "linear_full_cell_eis_sum",
+        "second_harmonic_nleis_difference",
+        "fit_uncertainty_and_multistart_stability",
+        "model_adequacy_checks"
+      ],
+      "competing_mechanisms": [
+        "positive-electrode contribution 3 and negative-electrode contribution 1",
+        "positive-electrode contribution 2 and negative-electrode contribution 2"
+      ],
+      "evidence": [
+        {
+          "path": "results/nleis_public_data_audit_v0.1.json",
+          "sha256": "d41f27534733ac137b82935d661bbf28c49c6156fe059c59fc432a1474ab540a",
+          "role": "hash-bound audit of 30 paired public EIS and second-harmonic spectra across ten conditions",
+          "source_kind": "local_artifact"
+        },
+        {
+          "path": "results/impedance_parity_lean_receipt.json",
+          "sha256": "99fb3d90618862e749b828112075df732f62b1f15285879ef685cc9af2063d55",
+          "role": "Lean kernel receipt for the compensating-shift and parity-separation theorems",
+          "source_kind": "formal_receipt"
+        },
+        {
+          "path": "https://doi.org/10.1149/1945-7111/ad15ca",
+          "role": "primary analytical theory for second-harmonic NLEIS",
+          "source_kind": "doi"
+        },
+        {
+          "path": "https://doi.org/10.5281/zenodo.10126580",
+          "role": "MIT-licensed public data and analysis release",
+          "source_kind": "doi"
+        }
+      ],
+      "countermodels": [
+        {
+          "id": "same_linear_sum_different_electrode_allocation",
+          "observable_expression": "positive + negative",
+          "target_expression": "positive - negative",
+          "witness_a": {
+            "positive": 3.0,
+            "negative": 1.0
+          },
+          "witness_b": {
+            "positive": 2.0,
+            "negative": 2.0
+          },
+          "atol": 1e-12,
+          "observable_atol": 1e-12,
+          "observable_rtol": 0.0,
+          "target_atol": 1e-12,
+          "target_rtol": 0.0,
+          "explanation": "Both allocations give the same linear full-cell sum of 4, while their opposite-parity second-harmonic targets are 2 and 0."
+        }
+      ],
+      "formal_receipt": {
+        "theorem": "ARCClaimClosure.ImpedanceParity.linearEISDoesNotIdentifyElectrodeAllocation",
+        "status": "kernel_checked",
+        "audit_path": "results/impedance_parity_lean_receipt.json"
+      },
+      "empirical_decision": {
+        "rule": "support unique electrode allocation only if a frozen multistart and uncertainty analysis shows one practically unique allocation under model broadening",
+        "trigger_met": false,
+        "evidence_summary": "The public corpus contains 30 finite paired spectra and nonzero second-harmonic signals, but the independent fit and multistart reproduction has not yet been completed."
+      },
+      "closure_measurements": [
+        "measure the phase-resolved second-harmonic spectrum under the same state of charge and cell condition"
+      ],
+      "closure_experiments": [
+        {
+          "id": "paired_linear_and_second_harmonic_fit",
+          "measured_variable": "linear EIS plus phase-resolved second-harmonic NLEIS over the shared frequency range",
+          "intervention_or_condition": "fit the frozen two-electrode model to EIS alone and jointly to EIS plus NLEIS using identical multistart seeds and held-out frequencies",
+          "predictions": [
+            {
+              "mechanism_id": "allocation_3_plus_1",
+              "expected_outcome": "linear sum equals 4 and second-harmonic difference equals 2",
+              "rationale": "opposite parity preserves electrode-allocation information removed by the sum"
+            },
+            {
+              "mechanism_id": "allocation_2_plus_2",
+              "expected_outcome": "linear sum equals 4 and second-harmonic difference equals 0",
+              "rationale": "equal electrode contributions cancel in the opposite-parity channel"
+            }
+          ],
+          "decision_rule": "Declare practical closure only if the joint fit separates the prespecified witness classes on held-out second-harmonic frequencies and materially contracts the electrode-parameter confidence region relative to EIS alone.",
+          "feasibility": "high",
+          "cost_tier": "low",
+          "safety_or_ethics": "standard moderate-amplitude electrochemical spectroscopy controls; verify linear-channel integrity and heating",
+          "expected_equivalence_class_reduction": 0.8
+        }
+      ],
+      "expected": {
+        "identifiability": "non_identifiable",
+        "decision": "inconclusive",
+        "promotion_ceiling": "compatibility_only"
+      }
+    }
+  ]
+}

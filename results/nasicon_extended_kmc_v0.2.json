@@ -1,0 +1,49 @@
+{
+  "schema_version": "arc-nasicon-extended-kmc-result-0.2",
+  "contract_path": "experiments/nasicon_extended_kmc_contract_v0.2.json",
+  "contract_sha256": "b2ab1a28da698034aefabd0d2b83c9be1ff3af6d961f4f8bd3892aa189fb77af",
+  "shard_sha256": {
+    "results/nasicon_extended_shards/seed_104729_structure_10.json": "bec8bba2e358cd5af70de4c572a50ded4752454e89998016a9e6a9abb590b7e0",
+    "results/nasicon_extended_shards/seed_104729_structure_41.json": "26193f88ab889f88441dce4192cebc223777287815c551f1d7fce4b4f397ec77",
+    "results/nasicon_extended_shards/seed_130363_structure_10.json": "13691a39b9394018fa42bf2f6bc1d9ad9ca632a4bd3c736b2f1df5faa311bae1",
+    "results/nasicon_extended_shards/seed_130363_structure_41.json": "47675e45425249362d71fc070d429dc4b6d1308987cbc632a7b609034e7e311e",
+    "results/nasicon_extended_shards/seed_155921_structure_10.json": "3822ae2637941934beabece50f5c6bff6ed52234d88216427d2ec2cd0033f85a",
+    "results/nasicon_extended_shards/seed_155921_structure_41.json": "ede9c4fe09b66d1b4c2615aa88015d63bb4c4c3e7c22a7f2ed9b8edb5771ddf5"
+  },
+  "paired_summary": [
+    {
+      "seed": 104729,
+      "high_initial_rate_structure": 41,
+      "low_initial_rate_structure": 10,
+      "high_late_window_median_conductivity_mS_cm": 4.137630886737016,
+      "low_late_window_median_conductivity_mS_cm": 5.402587206059544,
+      "ratio_high_over_low": 0.7658610086101428,
+      "pair_convergence_gate_pass": false
+    },
+    {
+      "seed": 130363,
+      "high_initial_rate_structure": 41,
+      "low_initial_rate_structure": 10,
+      "high_late_window_median_conductivity_mS_cm": 4.139495073178706,
+      "low_late_window_median_conductivity_mS_cm": 3.7826113870793536,
+      "ratio_high_over_low": 1.0943484935614576,
+      "pair_convergence_gate_pass": false
+    },
+    {
+      "seed": 155921,
+      "high_initial_rate_structure": 41,
+      "low_initial_rate_structure": 10,
+      "high_late_window_median_conductivity_mS_cm": 5.2330329446707395,
+      "low_late_window_median_conductivity_mS_cm": 8.66241569408658,
+      "ratio_high_over_low": 0.6041078065836858,
+      "pair_convergence_gate_pass": true
+    }
+  ],
+  "aggregate": {
+    "requested_run_count": 6,
+    "completed_run_count": 6,
+    "study_convergence_gate_pass": false,
+    "directional_confirmation_rule_pass": false
+  },
+  "interpretation_boundary": "This extension can test convergence and transport ordering inside the pinned fitted kMC model. It cannot identify a physical mechanism, validate the fitted energy landscape, establish population-level generality, or establish experimental pellet conductivity."
+}

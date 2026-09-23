@@ -8,6 +8,8 @@ dist/
 *.bbl
 *.blg
 *.log
+!results/nasicon_production_logs/*.log
+!results/nasicon_extended_logs/*.log
 *.out
 *.synctex.gz
-
+_upstream/

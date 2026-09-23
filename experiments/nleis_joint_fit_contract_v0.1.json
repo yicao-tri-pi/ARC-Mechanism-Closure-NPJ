@@ -1,0 +1,75 @@
+{
+  "schema_version": "arc-nleis-joint-fit-contract-0.1",
+  "frozen_at_local_date": "2026-09-19",
+  "purpose": "retrospectively test whether the public second-harmonic channel improves practical electrode-allocation identification beyond linear EIS alone",
+  "sources": {
+    "data_repository": {
+      "url": "https://github.com/yuefan98/2nd-NLEIS-manuscripts.git",
+      "commit": "859a0c75a64925ce15482069e2622643152c76eb",
+      "license": "MIT"
+    },
+    "toolbox_repository": {
+      "url": "https://github.com/yuefan98/nleis.py.git",
+      "commit": "71e472023fbb6b8fe1d7a06d536469c48f6dbe82",
+      "license": "MIT",
+      "version": "0.3"
+    }
+  },
+  "corpus": {
+    "soc_percent": [10, 30, 40, 50, 60],
+    "cell_states": ["fresh", "aged_100_cycles_at_2C"],
+    "replicate_indices": [0, 1, 2],
+    "expected_spectrum_count": 30
+  },
+  "models": {
+    "linear_eis_circuit": "L0-R0-TDS0-TDP1",
+    "second_harmonic_circuit": "d(TDSn0,TDPn1)",
+    "arms": ["eis_only", "joint_eis_nleis"],
+    "allocation_summary": "positive-electrode Rct divided by the sum of positive- and negative-electrode Rct"
+  },
+  "split": {
+    "rule": "after removing the inductive high-frequency region using the pinned toolbox, hold out every fifth retained frequency index starting at index zero",
+    "heldout_modulus": 5,
+    "heldout_remainder": 0,
+    "same_indices_for_both_arms": true
+  },
+  "optimization": {
+    "multistart_count": 12,
+    "master_seed": 271828,
+    "positive_parameter_log10_jitter": [-1.0, 1.0],
+    "nonlinear_kappa_initial_range": [-20.0, 20.0],
+    "nonlinear_epsilon_initial_range": [-0.2, 0.2],
+    "max_function_evaluations": 50000,
+    "retain_failed_starts": true,
+    "near_optimal_rule": "training objective no greater than best times 1.10 plus 0.005",
+    "minimum_successful_starts_per_arm": 8,
+    "minimum_near_optimal_starts_per_arm": 3
+  },
+  "metrics": {
+    "fit_error": "complex NRMSE: root mean squared complex residual divided by root mean squared complex data magnitude",
+    "eis_only_training_objective": "linear EIS train NRMSE",
+    "joint_training_objective": "mean of linear EIS and second-harmonic train NRMSE",
+    "primary_practical_identifiability_metric": "near-optimal allocation-fraction range width",
+    "secondary_metrics": [
+      "held-out linear EIS NRMSE",
+      "held-out second-harmonic NRMSE",
+      "successful and near-optimal start counts",
+      "best-fit electrode-specific Rct values"
+    ]
+  },
+  "confirmation_rule": {
+    "per_spectrum_eligible": "both arms meet the minimum successful-start and near-optimal-start counts",
+    "error_gate": "median joint held-out linear EIS NRMSE <= 0.10 and median joint held-out second-harmonic NRMSE <= 0.20",
+    "contraction_gate": "joint near-optimal allocation range is at most 75 percent of the EIS-only range in at least 20 of 30 spectra",
+    "joint_rule": "all 30 spectra are eligible and both the error and contraction gates pass"
+  },
+  "reporting_policy": [
+    "retain all spectra, starts, optimizer failures, held-out errors, and allocation ranges",
+    "do not select states of charge, replicates, circuits, starts, or frequencies after observing results",
+    "report practical and structural identifiability separately",
+    "a failed contraction rule does not invalidate second-harmonic information; it falsifies this frozen operational closure criterion",
+    "a passed rule is conditional on the declared equivalent-circuit family and does not identify a unique physical degradation mechanism"
+  ],
+  "interpretation_boundary": "This experiment evaluates practical parameter contraction within a pinned two-electrode circuit family on a public battery dataset. It does not establish universal EIS non-identifiability, validate the circuit as the true cell mechanism, or directly establish solid-electrolyte transport causality.",
+  "sealed_test_interaction": "This deep-case experiment does not access or alter the paper-level sealed claim benchmark."
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "arc-nleis-joint-fit-provenance-0.1",
+  "contract_sha256": "3c73d978ac974af68df068910759e53f502acb659392222c2c19714533e42c6d",
+  "aggregate_result_sha256": "8e0160c7b7e49d400998d078a332e72c681aa619f1e39ca56bf042f25311843f",
+  "runner_sha256": "6abb675341c82f589995c744253d9ecc13b6c7da28b3848ec0c5ba378640a40e",
+  "aggregator_sha256": "8b95133a19a33a08e2cc9da723322e4e2798b457c9a288cdc03a84240c09a7c9",
+  "shard_sha256": {
+    "soc60_fresh_rep0.json": "50ac1d42e6aba778cc1329b9c79c197a7836985f2226406a93de734dcc58fc21",
+    "soc60_fresh_rep1.json": "254ed4fb5962ba2ecd6b0ce20ed915bd995cd6dd212003988733c2b1db51b1be",
+    "soc60_fresh_rep2.json": "c034dc473fb250d3647f615253b672c9cfe57d6ac576f67da5d608c3b215937c",
+    "soc60_aged_100_cycles_at_2C_rep0.json": "8d0db905c2ec1cf1e94ef2486cfad5c784c6298f6b8bdc4ef4a73d4edec385b7",
+    "soc60_aged_100_cycles_at_2C_rep1.json": "2cec910c1bb6d89e7183ef21a7c82f6643f1855cc02ae8eb15e410fa8d9a8d51",
+    "soc60_aged_100_cycles_at_2C_rep2.json": "125ab64729929891ed9ff5c2b1bace353f2a35ff39d753b4b7f8fae18842dd07"
+  },
+  "figure_sha256": {
+    "nleis_joint_fit.png": "dbf5e7f52e905b386337029620a56527cc5f8969074786d7c957a93ecc411089",
+    "nleis_joint_fit.svg": "a940aa1ad220c896fa8189a7f7be04e8391b1ef7e311c90edf6cbc723eeab472"
+  },
+  "aggregation_gate": "Exactly 30 unique corpus keys with matching contract, data-repository, and toolbox identities.",
+  "claim_boundary": "The result rejects only the frozen fixed-circuit practical-identifiability confirmation rule. It does not establish that NLEIS is uninformative, prove physical parameter uniqueness, or identify a mechanism."
+}

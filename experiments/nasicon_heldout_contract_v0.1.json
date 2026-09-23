@@ -1,0 +1,62 @@
+{
+  "schema_version": "arc-nasicon-heldout-contract-0.1",
+  "frozen_at_local_date": "2026-09-18",
+  "purpose": "confirm whether discovery-set mean-barrier non-identifiability recurs across held-out NASICON compositions under two frozen barrier conventions",
+  "upstream_repository": "https://github.com/caneparesearch/NASICON_KMC_paper_data",
+  "upstream_commit": "69eb10b7c52ddd85e39ebeb882b2e4ea617e7770",
+  "discovery_composition_excluded": 0.2,
+  "heldout_compositions": [
+    0.001,
+    0.01,
+    0.1,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    0.99,
+    0.999
+  ],
+  "configuration_indices_per_composition": [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+    11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+    21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+    31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+    41, 42, 43, 44, 45, 46, 47, 48, 49, 50
+  ],
+  "temperature_k": 573,
+  "attempt_frequency_hz": 5000000000000.0,
+  "supercell_shape": [8, 8, 8],
+  "channels": {
+    "mean_ekra_to_full_rate": {
+      "observable": "arithmetic mean of event.ekra over positive-probability directed events",
+      "target": "sum of event.probability over all positive-probability directed events",
+      "observable_absolute_tolerance_mev": 0.25,
+      "target_rate_ratio_threshold": 1.25,
+      "role": "source-model primary channel"
+    },
+    "nonnegative_directional_barrier": {
+      "observable": "arithmetic mean of event.barrier after restricting to positive-probability events with barrier >= 0 meV",
+      "target": "sum of event.probability over the same nonnegative-barrier events",
+      "observable_absolute_tolerance_mev": 0.25,
+      "target_rate_ratio_threshold": 1.2,
+      "role": "negative-barrier sensitivity channel"
+    }
+  },
+  "primary_endpoints": [
+    "number of held-out compositions with at least one tolerance-matched pair",
+    "number of held-out compositions whose maximum matched-pair rate ratio meets the frozen channel threshold",
+    "pooled fraction of tolerance-matched pairs meeting the frozen channel threshold"
+  ],
+  "joint_confirmation_rule": {
+    "mean_ekra_to_full_rate_minimum_compositions": 6,
+    "nonnegative_directional_barrier_minimum_compositions": 3,
+    "requires_both": true
+  },
+  "selection_policy": "Within each held-out composition enumerate all 1,225 unordered configuration pairs. Report every tolerance-matched pair count and the maximum target ratio; do not substitute a different tolerance or endpoint after inspection.",
+  "multiplicity_policy": "This is a deterministic finite-corpus confirmation, not a sampling-based significance test. Report composition-level and pooled descriptive endpoints without p-values.",
+  "interpretation_boundary": "Passing confirms recurrence only within the supplied initial-configuration corpus. It does not establish long-time diffusion, conductivity, causal mechanism, or transfer to experimental pellets.",
+  "sealed_test_interaction": "This scan does not access or alter the separately sealed paper-level benchmark test."
+}

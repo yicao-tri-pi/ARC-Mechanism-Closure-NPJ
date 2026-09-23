@@ -1,0 +1,348 @@
+{
+  "schema_version": "arc-nasicon-kmc-smoke-result-0.1",
+  "upstream_commit": "69eb10b7c52ddd85e39ebeb882b2e4ea617e7770",
+  "input_sha256": {
+    "inputs/prim.json": "a1206dbd07f542526b20cc4fa31710fe6237ddff2575a28ccca29bbf609bf6ec",
+    "inputs/fitting_results.pkl": "a3a7a86cd80aa94600bf34460f4ad8d7206a2c2179fe5e4fbbf85d1a0d39da57",
+    "inputs/fitting_results_site.pkl": "04020e963082338b30b19aac03300b287e730afd92efe77f6f5738dab8811c42",
+    "inputs/events_888_site.pkl": "5c05541ab900c6806dcf7873833f4375492eae19d8ecf96b1293e13a6076ff0e",
+    "inputs/event_kernal_888.csv": "7eb781ab1b2db59b14c2b258686a3d5b639d8dcc58f7dc77900e46f0ffa21bce",
+    "inputs/lce.pkl": "44ea7a722b043fc925a79afe7d2ff74775b1c95aa2532163152d96eb81a5ed58",
+    "inputs/lce_site.pkl": "efac7e45e14d386c440c5812216e22644e58f0b0cea44ba978f7ee4190247338",
+    "kmc/mc_results.h5": "a367c0b18b2492318b607ae792094b8338ba2bc721ebe59f669094424b146226",
+    "lib/kmc.py": "26f217c92a19881ca0294dda63cfd4b42008ac045ae0917a1597c7aff74f6813",
+    "lib/model.py": "da8cfffecc1b1a6baca39ab4c34996cc4439d67633b7eb96cff05eefeb87773f"
+  },
+  "configuration": {
+    "composition_parameter_comp": 0.2,
+    "paper_formula_x": 2.4,
+    "formula_na_content": 3.4,
+    "structure_indices": [
+      48,
+      49
+    ],
+    "temperature_k": 573,
+    "attempt_frequency_hz": 5000000000000.0,
+    "supercell_shape": [
+      8,
+      8,
+      8
+    ],
+    "seed": 20260918,
+    "equilibration_passes": 1,
+    "measurement_passes": 3
+  },
+  "package_versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "tables": "3.10.1",
+    "pymatgen": "2025.10.7",
+    "numba": "0.62.1"
+  },
+  "structure_results": [
+    {
+      "structure_index": 48,
+      "seed": 20260918,
+      "pass_length_events": 4096,
+      "equilibration_passes": 1,
+      "measurement_passes": 3,
+      "attempted_kmc_events": 16384,
+      "initial_event_summary": {
+        "active_directed_event_count": 1702,
+        "directional_barrier_mev": {
+          "mean": 317.09445540244076,
+          "standard_deviation": 213.91724300047477,
+          "quantiles": {
+            "0.0": -189.29162939951016,
+            "0.05": 13.182564750585414,
+            "0.25": 136.0788804751839,
+            "0.5": 326.1658285501836,
+            "0.75": 400.8347044455852,
+            "0.95": 701.3529317649832,
+            "1.0": 844.6831871584841
+          },
+          "negative_count": 80
+        },
+        "ekra_mev": {
+          "mean": 243.65256854433025,
+          "standard_deviation": 73.82753609138832,
+          "quantiles": {
+            "0.0": 100.74167929727199,
+            "0.05": 100.74167929727199,
+            "0.25": 182.8917058795077,
+            "0.5": 251.15436892722272,
+            "0.75": 288.1737412854254,
+            "0.95": 360.79287281111345,
+            "1.0": 453.3524326507202
+          }
+        },
+        "rate_hz": {
+          "sum": 3986628755072764.5,
+          "mean": 2342320067610.32,
+          "quantiles": {
+            "0.0": 186047.09090511815,
+            "0.05": 3390574.646666435,
+            "0.25": 1490934833.777154,
+            "0.5": 6763992464.65562,
+            "0.75": 317759466527.4367,
+            "0.95": 3828456814682.4126,
+            "1.0": 231137398896798.34
+          }
+        }
+      },
+      "initial_active_graph": {
+        "active_site_count": 2026,
+        "active_directed_event_count": 1702,
+        "active_undirected_edge_count": 1702,
+        "connected_component_count": 328,
+        "largest_component_site_count": 90,
+        "largest_component_site_fraction": 0.044422507403751234,
+        "interpretation": "instantaneous occupied-vacant event graph only; periodic wrapping and long-time dynamic percolation are not certified"
+      },
+      "measurement_summaries": [
+        {
+          "time": 6.713005391222798e-10,
+          "D_J": 1.8291507254777764e-08,
+          "D_tracer": 5.4387548960653886e-08,
+          "conductivity": 0.7469156213614319,
+          "f": 0.09753793746213232,
+          "H_R": 2.973377109010401,
+          "msd": 2.1906234563295803,
+          "final_na_at_na1": 0.14847788627225733,
+          "average_na_at_na1": 0.1517134670904897
+        },
+        {
+          "time": 1.3291242791933532e-09,
+          "D_J": 6.213964897911762e-08,
+          "D_tracer": 4.415094919629803e-08,
+          "conductivity": 2.537411153818161,
+          "f": 0.11193588410175925,
+          "H_R": 0.7105117251488693,
+          "msd": 3.520925911573918,
+          "final_na_at_na1": 0.1450315910396324,
+          "average_na_at_na1": 0.14796141170089955
+        },
+        {
+          "time": 1.9862235612180478e-09,
+          "D_J": 4.523609654260064e-08,
+          "D_tracer": 4.089772374660596e-08,
+          "conductivity": 1.8471712957529474,
+          "f": 0.12213336781179542,
+          "H_R": 0.9040948904176767,
+          "msd": 4.873921350341737,
+          "final_na_at_na1": 0.1392877656519242,
+          "average_na_at_na1": 0.14580980483005895
+        }
+      ],
+      "final_event_summary": {
+        "active_directed_event_count": 3278,
+        "directional_barrier_mev": {
+          "mean": 507.36157363542657,
+          "standard_deviation": 135.6170140249127,
+          "quantiles": {
+            "0.0": 136.0788804751839,
+            "0.05": 398.1383067130621,
+            "0.25": 398.1383067130621,
+            "0.5": 398.1383067130621,
+            "0.75": 694.150427651996,
+            "0.95": 701.3529317649832,
+            "1.0": 772.3474784455791
+          },
+          "negative_count": 0
+        },
+        "ekra_mev": {
+          "mean": 214.3191827626304,
+          "standard_deviation": 55.19819447869447,
+          "quantiles": {
+            "0.0": 169.004342344987,
+            "0.05": 169.004342344987,
+            "0.25": 169.004342344987,
+            "0.5": 169.004342344987,
+            "0.75": 237.26700539270206,
+            "0.95": 309.8861369183901,
+            "1.0": 433.4120043368015
+          }
+        },
+        "rate_hz": {
+          "sum": 5588517712776.584,
+          "mean": 1704855922.1405077,
+          "quantiles": {
+            "0.0": 805093.1685873154,
+            "0.05": 3390574.646666435,
+            "0.25": 3923036.878067596,
+            "0.5": 1574615869.25386,
+            "0.75": 1574615869.25386,
+            "0.95": 1574615869.25386,
+            "1.0": 317759466527.4367
+          }
+        }
+      },
+      "final_active_graph": {
+        "active_site_count": 2988,
+        "active_directed_event_count": 3278,
+        "active_undirected_edge_count": 3278,
+        "connected_component_count": 51,
+        "largest_component_site_count": 2817,
+        "largest_component_site_fraction": 0.9427710843373494,
+        "interpretation": "instantaneous occupied-vacant event graph only; periodic wrapping and long-time dynamic percolation are not certified"
+      },
+      "runtime_seconds": 10.108722348697484,
+      "seconds_per_measurement_pass_including_amortized_setup": 3.3695741162324944,
+      "naive_runtime_projection_for_3000_measurement_passes_hours": 2.8079784301937454,
+      "smoke_gate_pass": true
+    },
+    {
+      "structure_index": 49,
+      "seed": 20260918,
+      "pass_length_events": 4096,
+      "equilibration_passes": 1,
+      "measurement_passes": 3,
+      "attempted_kmc_events": 16384,
+      "initial_event_summary": {
+        "active_directed_event_count": 1588,
+        "directional_barrier_mev": {
+          "mean": 316.8863024300498,
+          "standard_deviation": 211.95250660523698,
+          "quantiles": {
+            "0.0": -189.29162939951016,
+            "0.05": 13.182564750585414,
+            "0.25": 136.0788804751839,
+            "0.5": 336.1621059857067,
+            "0.75": 435.86261554696307,
+            "0.95": 694.150427651996,
+            "1.0": 1050.6838079862023
+          },
+          "negative_count": 51
+        },
+        "ekra_mev": {
+          "mean": 250.50850569925467,
+          "standard_deviation": 75.91999080018343,
+          "quantiles": {
+            "0.0": 100.74167929727199,
+            "0.05": 100.74167929727199,
+            "0.25": 182.8917058795077,
+            "0.5": 251.15436892722272,
+            "0.75": 306.43655769596734,
+            "0.95": 370.32376786766116,
+            "1.0": 452.4737944498969
+          }
+        },
+        "rate_hz": {
+          "sum": 2675729937419207.0,
+          "mean": 1684968474445.3445,
+          "quantiles": {
+            "0.0": 2869.1945373080744,
+            "0.05": 3923036.878067596,
+            "0.25": 733454736.2567166,
+            "0.5": 5524355427.554855,
+            "0.75": 317759466527.4367,
+            "0.95": 3828456814682.4126,
+            "1.0": 231137398896798.34
+          }
+        }
+      },
+      "initial_active_graph": {
+        "active_site_count": 1893,
+        "active_directed_event_count": 1588,
+        "active_undirected_edge_count": 1588,
+        "connected_component_count": 310,
+        "largest_component_site_count": 102,
+        "largest_component_site_fraction": 0.05388272583201268,
+        "interpretation": "instantaneous occupied-vacant event graph only; periodic wrapping and long-time dynamic percolation are not certified"
+      },
+      "measurement_summaries": [
+        {
+          "time": 6.409291115346482e-10,
+          "D_J": 1.1066282578420281e-08,
+          "D_tracer": 6.839171003029097e-08,
+          "conductivity": 0.4518807123487865,
+          "f": 0.12676393374111825,
+          "H_R": 6.180188292286852,
+          "msd": 2.630054276762981,
+          "final_na_at_na1": 0.1533601378518093,
+          "average_na_at_na1": 0.15931467765391313
+        },
+        {
+          "time": 1.2805181128027707e-09,
+          "D_J": 1.7502764304988436e-08,
+          "D_tracer": 5.5346897367588506e-08,
+          "conductivity": 0.714708082516733,
+          "f": 0.14913117060776226,
+          "H_R": 3.162180350666904,
+          "msd": 4.252362273997984,
+          "final_na_at_na1": 0.1481906950028719,
+          "average_na_at_na1": 0.15544783925813743
+        },
+        {
+          "time": 1.920744110101514e-09,
+          "D_J": 1.905251649123519e-08,
+          "D_tracer": 4.9156866356169796e-08,
+          "conductivity": 0.7779906814312857,
+          "f": 0.14927899867684455,
+          "H_R": 2.5800721064214085,
+          "msd": 5.665065691479625,
+          "final_na_at_na1": 0.14646754738655945,
+          "average_na_at_na1": 0.1527142905150987
+        }
+      ],
+      "final_event_summary": {
+        "active_directed_event_count": 3154,
+        "directional_barrier_mev": {
+          "mean": 499.3720786809249,
+          "standard_deviation": 130.79062739878955,
+          "quantiles": {
+            "0.0": 76.41956282792515,
+            "0.05": 398.1383067130621,
+            "0.25": 398.1383067130621,
+            "0.5": 398.1383067130621,
+            "0.75": 598.642017083457,
+            "0.95": 701.3529317649832,
+            "1.0": 705.3726591509337
+          },
+          "negative_count": 0
+        },
+        "ekra_mev": {
+          "mean": 217.66863295059883,
+          "standard_deviation": 59.71298508133605,
+          "quantiles": {
+            "0.0": 169.004342344987,
+            "0.05": 169.004342344987,
+            "0.25": 169.004342344987,
+            "0.5": 169.004342344987,
+            "0.75": 237.26700539270206,
+            "0.95": 309.8861369183901,
+            "1.0": 442.9428993933492
+          }
+        },
+        "rate_hz": {
+          "sum": 6917445507207.85,
+          "mean": 2193229393.5345116,
+          "quantiles": {
+            "0.0": 3125489.9146430776,
+            "0.05": 3390574.646666435,
+            "0.25": 27143096.836309478,
+            "0.5": 1574615869.25386,
+            "0.75": 1574615869.25386,
+            "0.95": 1574615869.25386,
+            "1.0": 1063720468683.2446
+          }
+        }
+      },
+      "final_active_graph": {
+        "active_site_count": 2925,
+        "active_directed_event_count": 3154,
+        "active_undirected_edge_count": 3154,
+        "connected_component_count": 66,
+        "largest_component_site_count": 2678,
+        "largest_component_site_fraction": 0.9155555555555556,
+        "interpretation": "instantaneous occupied-vacant event graph only; periodic wrapping and long-time dynamic percolation are not certified"
+      },
+      "runtime_seconds": 8.861581176519394,
+      "seconds_per_measurement_pass_including_amortized_setup": 2.9538603921731315,
+      "naive_runtime_projection_for_3000_measurement_passes_hours": 2.4615503268109427,
+      "smoke_gate_pass": true
+    }
+  ],
+  "all_smoke_gates_pass": true,
+  "interpretation_boundary": "This verifies code-path and artifact completeness only. Three measurement passes are not a convergence study; conductivity, Haven ratio, and graph summaries must not be interpreted as scientific estimates."
+}

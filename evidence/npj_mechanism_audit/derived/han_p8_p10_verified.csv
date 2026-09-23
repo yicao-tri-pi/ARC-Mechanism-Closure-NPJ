@@ -1,0 +1,4 @@
+polymer,sequence,peo_repeat_n,tg_c,sigma_s_cm,sigma_sd_s_cm,li_concentration_mol_l,mn_nmr_kda,sigma_per_li_molarity
+P8,alternating,13,-32.0,4.2000000000000004e-05,4.9999999999999996e-06,1.18,18.3,3.559322033898306e-05
+P9,alternating,17,-31.0,1.9e-05,2.2e-06,0.99,21.1,1.9191919191919194e-05
+P10,alternating,23,-35.0,9.6e-06,1.3e-06,0.75,24.2,1.28e-05

@@ -1,0 +1,49 @@
+{
+  "schema_version": "arc-nasicon-production-kmc-result-0.1",
+  "contract_path": "experiments/nasicon_production_kmc_contract_v0.1.json",
+  "contract_sha256": "b4e49da0d496190842af8ff16f494a4659d89f692167ecc73e865b55c0197969",
+  "shard_sha256": {
+    "results/nasicon_production_shards/seed_104729_structure_10.json": "6258c7ca8dca10e02ac76a42f14cb63a087e53f01250a274a666992fc8620a93",
+    "results/nasicon_production_shards/seed_104729_structure_41.json": "dde9edb03b9219440ed6a400432491bf162a5383924942a5706a7256d7725156",
+    "results/nasicon_production_shards/seed_130363_structure_10.json": "ae6320ab0da749d082e5af42425183295ba8ec9e3d31d02411eaba13e24bdc40",
+    "results/nasicon_production_shards/seed_130363_structure_41.json": "2c28e320f1c9c3f578fae3a628deca5255e5ce570d4ac1a7581162f4a7a88671",
+    "results/nasicon_production_shards/seed_155921_structure_10.json": "5bfed22411195f6be52142f2cc8f1989d19a5221592667dbb0ca88e6d55ad3e7",
+    "results/nasicon_production_shards/seed_155921_structure_41.json": "c57cd37162ff56f7345bac1d239d600c766bff3b55eef93eec351a431b7d5620"
+  },
+  "paired_summary": [
+    {
+      "seed": 104729,
+      "high_initial_rate_structure": 41,
+      "low_initial_rate_structure": 10,
+      "high_late_window_median_conductivity_mS_cm": 2.668265777520184,
+      "low_late_window_median_conductivity_mS_cm": 4.193839566954482,
+      "ratio_high_over_low": 0.6362345852580736,
+      "pair_convergence_gate_pass": false
+    },
+    {
+      "seed": 130363,
+      "high_initial_rate_structure": 41,
+      "low_initial_rate_structure": 10,
+      "high_late_window_median_conductivity_mS_cm": 1.885961156037952,
+      "low_late_window_median_conductivity_mS_cm": 1.6319309853616273,
+      "ratio_high_over_low": 1.1556623245437263,
+      "pair_convergence_gate_pass": true
+    },
+    {
+      "seed": 155921,
+      "high_initial_rate_structure": 41,
+      "low_initial_rate_structure": 10,
+      "high_late_window_median_conductivity_mS_cm": 5.379205289011006,
+      "low_late_window_median_conductivity_mS_cm": 5.192029848571817,
+      "ratio_high_over_low": 1.0360505324311022,
+      "pair_convergence_gate_pass": true
+    }
+  ],
+  "aggregate": {
+    "requested_run_count": 6,
+    "completed_run_count": 6,
+    "study_convergence_gate_pass": false,
+    "directional_confirmation_rule_pass": false
+  },
+  "interpretation_boundary": "This experiment can test transport separation inside the pinned fitted kMC model. It cannot by itself identify the physical mechanism, validate the fitted energy landscape, or establish experimental pellet conductivity."
+}

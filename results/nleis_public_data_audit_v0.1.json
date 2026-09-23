@@ -1,0 +1,195 @@
+{
+  "schema_version": "arc-nleis-public-data-audit-0.1",
+  "upstream_repository": "https://github.com/yuefan98/2nd-NLEIS-manuscripts.git",
+  "upstream_commit": "859a0c75a64925ce15482069e2622643152c76eb",
+  "license": "MIT",
+  "condition_count": 10,
+  "paired_spectrum_count": 30,
+  "all_values_finite": true,
+  "all_second_harmonic_rms_positive": true,
+  "conditions": [
+    {
+      "soc_percent": 10,
+      "cell_state": "fresh",
+      "replicate_count": 3,
+      "frequency_count": 66,
+      "frequency_min_hz": 0.0031623,
+      "frequency_max_hz": 10000.0,
+      "all_values_finite": true,
+      "second_harmonic_rms_by_replicate": [
+        0.0002652374702774973,
+        0.0002567542894988966,
+        0.0002811970637260271
+      ],
+      "all_second_harmonic_rms_positive": true
+    },
+    {
+      "soc_percent": 10,
+      "cell_state": "aged_100_cycles_at_2C",
+      "replicate_count": 3,
+      "frequency_count": 66,
+      "frequency_min_hz": 0.0031623,
+      "frequency_max_hz": 10000.0,
+      "all_values_finite": true,
+      "second_harmonic_rms_by_replicate": [
+        0.0016971262722824893,
+        0.0014650293881213004,
+        0.0016036682602785278
+      ],
+      "all_second_harmonic_rms_positive": true
+    },
+    {
+      "soc_percent": 30,
+      "cell_state": "fresh",
+      "replicate_count": 3,
+      "frequency_count": 66,
+      "frequency_min_hz": 0.0031623,
+      "frequency_max_hz": 10000.0,
+      "all_values_finite": true,
+      "second_harmonic_rms_by_replicate": [
+        9.794916841605871e-05,
+        7.252875047821373e-05,
+        5.995210693152414e-05
+      ],
+      "all_second_harmonic_rms_positive": true
+    },
+    {
+      "soc_percent": 30,
+      "cell_state": "aged_100_cycles_at_2C",
+      "replicate_count": 3,
+      "frequency_count": 66,
+      "frequency_min_hz": 0.0031623,
+      "frequency_max_hz": 10000.0,
+      "all_values_finite": true,
+      "second_harmonic_rms_by_replicate": [
+        0.00016451950006677238,
+        0.00016404767671936483,
+        0.00016169059752512904
+      ],
+      "all_second_harmonic_rms_positive": true
+    },
+    {
+      "soc_percent": 40,
+      "cell_state": "fresh",
+      "replicate_count": 3,
+      "frequency_count": 66,
+      "frequency_min_hz": 0.0031623,
+      "frequency_max_hz": 10000.0,
+      "all_values_finite": true,
+      "second_harmonic_rms_by_replicate": [
+        0.000301975600434178,
+        0.0002821897744629074,
+        0.0002498825190209407
+      ],
+      "all_second_harmonic_rms_positive": true
+    },
+    {
+      "soc_percent": 40,
+      "cell_state": "aged_100_cycles_at_2C",
+      "replicate_count": 3,
+      "frequency_count": 66,
+      "frequency_min_hz": 0.0031623,
+      "frequency_max_hz": 10000.0,
+      "all_values_finite": true,
+      "second_harmonic_rms_by_replicate": [
+        0.0002758011721743477,
+        0.0002560320557715058,
+        0.00028103211060027987
+      ],
+      "all_second_harmonic_rms_positive": true
+    },
+    {
+      "soc_percent": 50,
+      "cell_state": "fresh",
+      "replicate_count": 3,
+      "frequency_count": 66,
+      "frequency_min_hz": 0.0031623,
+      "frequency_max_hz": 10000.0,
+      "all_values_finite": true,
+      "second_harmonic_rms_by_replicate": [
+        0.0006030955839332576,
+        0.0005719891222827741,
+        0.0005995839814239527
+      ],
+      "all_second_harmonic_rms_positive": true
+    },
+    {
+      "soc_percent": 50,
+      "cell_state": "aged_100_cycles_at_2C",
+      "replicate_count": 3,
+      "frequency_count": 66,
+      "frequency_min_hz": 0.0031623,
+      "frequency_max_hz": 10000.0,
+      "all_values_finite": true,
+      "second_harmonic_rms_by_replicate": [
+        0.0004611228457858482,
+        0.0004284843089152551,
+        0.0004789391861493224
+      ],
+      "all_second_harmonic_rms_positive": true
+    },
+    {
+      "soc_percent": 60,
+      "cell_state": "fresh",
+      "replicate_count": 3,
+      "frequency_count": 66,
+      "frequency_min_hz": 0.0031623,
+      "frequency_max_hz": 10000.0,
+      "all_values_finite": true,
+      "second_harmonic_rms_by_replicate": [
+        5.795521667643582e-05,
+        7.065907058094964e-05,
+        6.473457873014437e-05
+      ],
+      "all_second_harmonic_rms_positive": true
+    },
+    {
+      "soc_percent": 60,
+      "cell_state": "aged_100_cycles_at_2C",
+      "replicate_count": 3,
+      "frequency_count": 66,
+      "frequency_min_hz": 0.0031623,
+      "frequency_max_hz": 10000.0,
+      "all_values_finite": true,
+      "second_harmonic_rms_by_replicate": [
+        4.323142888266313e-05,
+        0.00011537028785888064,
+        0.00010441001054015756
+      ],
+      "all_second_harmonic_rms_positive": true
+    }
+  ],
+  "file_sha256": {
+    "Part II/data/freq_10f.txt": "d8a7caecf159170ef65ee06bf0db93c43dd0f1b99f26115ed78c8ec4b7bb041d",
+    "Part II/data/Z1s_10f.txt": "6ee28d993b74979e534e9887ddad9adbee295d9a6e100a80106dd1c28adaf0c7",
+    "Part II/data/Z2s_10f.txt": "b8e202f617724758e4a40ded63d11983fdeaaed0199f04e5fa815b4d19434049",
+    "Part II/data/freq_10a.txt": "d8a7caecf159170ef65ee06bf0db93c43dd0f1b99f26115ed78c8ec4b7bb041d",
+    "Part II/data/Z1s_10a.txt": "122d6da10d40bdcd6055aa5293e1104b64dd203f1a75e418e47262ed53eb56bd",
+    "Part II/data/Z2s_10a.txt": "20693b7f55f0eea78409eb90acd49454838def12e9c7362eedc0935ab2d193ad",
+    "Part II/data/freq_30f.txt": "d8a7caecf159170ef65ee06bf0db93c43dd0f1b99f26115ed78c8ec4b7bb041d",
+    "Part II/data/Z1s_30f.txt": "c35c1553302db4a93f81bacdf0cc428ae747ff51388e103cc61183ff822438fc",
+    "Part II/data/Z2s_30f.txt": "07ee9955612f67d8a871970e4ead9a3a10735d8c76395d6059e480a7abae6ce9",
+    "Part II/data/freq_30a.txt": "d8a7caecf159170ef65ee06bf0db93c43dd0f1b99f26115ed78c8ec4b7bb041d",
+    "Part II/data/Z1s_30a.txt": "4c077445e12151fe1b2fc3b2981ea8cffe9d673615faa53a93e0a0caa637eabc",
+    "Part II/data/Z2s_30a.txt": "22fb9c2345d05dccc75d3e17a936e55a1cbd9bb77640448e20d2d08213ba73aa",
+    "Part II/data/freq_40f.txt": "d8a7caecf159170ef65ee06bf0db93c43dd0f1b99f26115ed78c8ec4b7bb041d",
+    "Part II/data/Z1s_40f.txt": "a9eebd949e8a1086d3807234aa4abdf3f0f81c605ece11ca68340a6c5ce0e82d",
+    "Part II/data/Z2s_40f.txt": "602e14a4c496d886fe237d794a5670eac823e6b63d8ac52d39eeab96b4693f79",
+    "Part II/data/freq_40a.txt": "d8a7caecf159170ef65ee06bf0db93c43dd0f1b99f26115ed78c8ec4b7bb041d",
+    "Part II/data/Z1s_40a.txt": "cc91243c28825b0420286136260e671061e4c5ff0fc7360e79912310ae465e67",
+    "Part II/data/Z2s_40a.txt": "8290b9d0c7e0e30fe01596bb4a07f7f00448cf4445583d0992df62556ba1af9a",
+    "Part II/data/freq_50f.txt": "d8a7caecf159170ef65ee06bf0db93c43dd0f1b99f26115ed78c8ec4b7bb041d",
+    "Part II/data/Z1s_50f.txt": "d55b1f61227baa8e7de09c350c110b4827af5ad757c7d23b153748fc4e42dfff",
+    "Part II/data/Z2s_50f.txt": "dfa358d294427a1237b48d2793106e2e0f83ee4165948fd9d5962d9c9e458e1d",
+    "Part II/data/freq_50a.txt": "d8a7caecf159170ef65ee06bf0db93c43dd0f1b99f26115ed78c8ec4b7bb041d",
+    "Part II/data/Z1s_50a.txt": "adec7d02ebace5bde8b67c34d1bad971dedb5872c04b566da964e13e1c1d758e",
+    "Part II/data/Z2s_50a.txt": "fd02bb7a7f73166a5c205c1a166f689379964ef3f28bd0144897084c0c3afb29",
+    "Part II/data/freq_60f.txt": "d8a7caecf159170ef65ee06bf0db93c43dd0f1b99f26115ed78c8ec4b7bb041d",
+    "Part II/data/Z1s_60f.txt": "09b65cb05a3e4d20f1da13cbf4158854f94c834b2f6904f336a94851535d43d6",
+    "Part II/data/Z2s_60f.txt": "15475a22eb4bcb5ca7caaebb9976ce2031679b1a458d6f33c5ca18993b4f198d",
+    "Part II/data/freq_60a.txt": "d8a7caecf159170ef65ee06bf0db93c43dd0f1b99f26115ed78c8ec4b7bb041d",
+    "Part II/data/Z1s_60a.txt": "13d4820a5d43fb862a5c6e92a2b8955346300122f94cd6f62dc7f8399af1a65c",
+    "Part II/data/Z2s_60a.txt": "d8299997d21ad80b7e638078a6fd50109283d265a322c1f55ea9a97e160e659b"
+  },
+  "interpretation_boundary": "This audit establishes public paired-data completeness and nonzero recorded second-harmonic signals. It does not reproduce model fits, identify electrode parameters, validate the physical model, or establish experimental causality."
+}

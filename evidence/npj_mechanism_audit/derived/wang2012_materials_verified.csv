@@ -1,0 +1,6 @@
+sample_name,abbreviation,mw_kg_mol,pdi,liclo4_wt_pct,o_li_ratio,tg_k,fragility_m,epsilon1,epsilon1_sd,epsilon2,epsilon2_sd
+Poly(Polyethylene Oxide Styrene)-b-Polystyrene,PPEOSt-b-PSt,5.8/4.6,1.26,0.3,540,338,108,0.75,0.01,0.78,0.01
+Poly(Polyethylene Oxide Styrene),PPEOSt,5.8,1.22,0.3,370,265,101,0.72,0.02,0.76,0.02
+Poly(Norbornene Carboxylic Ethoxymethyl Ester),PNBCEM,6.6,1.17,0.5,320,314,93,0.41,0.01,0.46,0.01
+Poly(Polyethylene Oxide Caprolactone),PPEOCL,7.0,1.2,1.0,220,210,80,0.16,0.03,0.19,0.02
+Poly(Polyethylene Oxide Methacrylate),PPEOMA,4.1,1.21,0.5,460,240,45,-0.01,0.05,0.05,0.05

@@ -1,0 +1,12 @@
+{
+  "article_reported_r2_fragility_epsilon1": 0.8,
+  "article_reported_r2_fragility_epsilon2": 0.78,
+  "article_reported_r2_tg_epsilon1": 0.31,
+  "article_reported_r2_tg_epsilon2": 0.33,
+  "calculation": "unweighted OLS with intercept using rounded SI Table I values",
+  "interpretation": "The rounded public SI table preserves the qualitative ordering but does not exactly reproduce the article's R^2 values. Unrounded fit inputs are not provided; with n=5, rounding and fit details can materially change R^2. This is a numerical reproducibility tension, not evidence against the descriptive decoupling result.",
+  "rounded_table_r2_fragility_epsilon1": 0.8534912929482502,
+  "rounded_table_r2_fragility_epsilon2": 0.8373431074247112,
+  "rounded_table_r2_tg_epsilon1": 0.4880018642866753,
+  "rounded_table_r2_tg_epsilon2": 0.5024833850126608
+}

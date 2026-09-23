@@ -1,0 +1,59 @@
+{
+  "schema_version": "arc-nasicon-kmc-smoke-contract-0.1",
+  "frozen_at_local_date": "2026-09-18",
+  "purpose": "verify that the pinned public NASICON inputs and a controlled wrapper execute end to end on the configured SSH platform",
+  "interpretation": "implementation smoke test only; no scientific comparison or convergence claim",
+  "upstream_repository": "https://github.com/caneparesearch/NASICON_KMC_paper_data",
+  "upstream_commit": "69eb10b7c52ddd85e39ebeb882b2e4ea617e7770",
+  "execution_source_commit": "7874303da9639ad34a3da87f485bf05990a16e18",
+  "remote_host_alias": "kozo-dev-yi",
+  "resources": {
+    "processes": 1,
+    "expected_compute_minutes_excluding_environment_setup": "1-3",
+    "cpu_mode": "single-process serial kMC",
+    "gpu_required": false
+  },
+  "arms": [
+    {
+      "composition_parameter_comp": 0.2,
+      "structure_indices": [48, 49],
+      "temperature_k": 573,
+      "attempt_frequency_hz": 5000000000000.0,
+      "supercell_shape": [8, 8, 8],
+      "seed": 20260918,
+      "equilibration_passes": 1,
+      "measurement_passes": 3,
+      "pairing": "reset the same Python and NumPy random seed before each structure"
+    }
+  ],
+  "required_inputs": [
+    "inputs/prim.json",
+    "inputs/fitting_results.pkl",
+    "inputs/fitting_results_site.pkl",
+    "inputs/events_888_site.pkl",
+    "inputs/event_kernal_888.csv",
+    "inputs/lce.pkl",
+    "inputs/lce_site.pkl",
+    "kmc/mc_results.h5",
+    "lib/kmc.py",
+    "lib/model.py"
+  ],
+  "required_outputs": [
+    "input hashes and source commit",
+    "initial and final active-event barrier/rate summaries",
+    "initial and final active-event graph component summaries",
+    "collective diffusivity D_J",
+    "tracer diffusivity",
+    "Haven ratio",
+    "single-ion correlation factor",
+    "Nernst-Einstein conductivity",
+    "runtime, event count, package versions, and pass/fail gate"
+  ],
+  "success_rule": "both structures complete with finite positive simulated time, finite final transport metrics, exactly three measurement summaries, nonempty active-event graphs, and the expected upstream commit",
+  "nonclaims": [
+    "three measurement passes are not converged long-time transport",
+    "the smoke-test conductivity is not comparable to experiment",
+    "connected components of the instantaneous active-event graph do not establish periodic percolation",
+    "successful execution does not validate the fitted physical model"
+  ]
+}

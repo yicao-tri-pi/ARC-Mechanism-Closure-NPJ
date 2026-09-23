@@ -1,0 +1,6 @@
+# Preserve imported evidence bytes exactly. These upstream/generated artifacts
+# contain intentional whitespace and should not be normalized or treated as
+# source-code diffs.
+third_party/** -diff
+figures/*.svg -diff
+evidence/npj_mechanism_audit/derived/*.csv -diff

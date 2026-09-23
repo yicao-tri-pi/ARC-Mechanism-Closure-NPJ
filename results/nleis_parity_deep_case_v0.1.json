@@ -1,0 +1,46 @@
+{
+  "dataset": "data/nleis_parity_deep_case_v0.1.json",
+  "decisions": [
+    {
+      "claim_id": "JI-2023-LINEAR-EIS-ELECTRODE-ALLOCATION",
+      "decision": "inconclusive",
+      "evidence_integrity": "verified",
+      "failed_countermodels": [],
+      "identifiability": "non_identifiable",
+      "missing_measurements": [
+        "fit_uncertainty_and_multistart_stability",
+        "model_adequacy_checks",
+        "second_harmonic_nleis_difference"
+      ],
+      "promotion_ceiling": "compatibility_only",
+      "reasons": [
+        "an executable witness pair reproduces the observable but changes the target",
+        "no unique scientific target is recoverable from current measurements"
+      ],
+      "verified_countermodels": [
+        "same_linear_sum_different_electrode_allocation"
+      ]
+    }
+  ],
+  "metrics": {
+    "countermodel_verification_rate": 1.0,
+    "countermodels_total": 1,
+    "countermodels_verified": 1,
+    "decision_distribution": {
+      "inconclusive": 1
+    },
+    "decision_exact_match": 1.0,
+    "evidence_integrity": {
+      "verified": 1
+    },
+    "identifiability_distribution": {
+      "non_identifiable": 1
+    },
+    "identifiability_exact_match": 1.0,
+    "joint_exact_match": 1.0,
+    "n_claims": 1,
+    "overclaim_rate": 0.0,
+    "promotion_ceiling_exact_match": 1.0
+  },
+  "source_root": "."
+}

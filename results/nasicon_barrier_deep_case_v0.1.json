@@ -1,0 +1,80 @@
+{
+  "dataset": "data/nasicon_barrier_deep_case_v0.1.json",
+  "decisions": [
+    {
+      "claim_id": "DENG-2022-NASICON-INITIAL-RATE-REPRODUCTION",
+      "decision": "supported",
+      "evidence_integrity": "verified",
+      "failed_countermodels": [],
+      "identifiability": "identified",
+      "missing_measurements": [],
+      "promotion_ceiling": "source_scoped_support_only",
+      "reasons": [
+        "the frozen empirical support rule is met"
+      ],
+      "verified_countermodels": []
+    },
+    {
+      "claim_id": "DENG-2022-MEAN-BARRIER-ALONE-IDENTIFIES-INITIAL-RATE",
+      "decision": "falsified",
+      "evidence_integrity": "verified",
+      "failed_countermodels": [],
+      "identifiability": "non_identifiable",
+      "missing_measurements": [
+        "active_event_count_and_full_barrier_distribution"
+      ],
+      "promotion_ceiling": "bounded_falsification_only",
+      "reasons": [
+        "an executable witness pair reproduces the observable but changes the target",
+        "the frozen empirical falsification rule is met"
+      ],
+      "verified_countermodels": [
+        "near_equal_mean_barrier_different_initial_rate_sum"
+      ]
+    },
+    {
+      "claim_id": "DENG-2022-MEAN-BARRIER-ALONE-IDENTIFIES-CONDUCTIVITY",
+      "decision": "inconclusive",
+      "evidence_integrity": "verified",
+      "failed_countermodels": [],
+      "identifiability": "underdetermined",
+      "missing_measurements": [
+        "Haven_ratio_and_correlation_factor",
+        "converged_collective_and_tracer_diffusivity",
+        "long_range_event_network_connectivity",
+        "matched_temperature_experimental_conductivity"
+      ],
+      "promotion_ceiling": "proposal_only",
+      "reasons": [
+        "required measurements are absent from the evidence package",
+        "no unique scientific target is recoverable from current measurements"
+      ],
+      "verified_countermodels": []
+    }
+  ],
+  "metrics": {
+    "countermodel_verification_rate": 1.0,
+    "countermodels_total": 1,
+    "countermodels_verified": 1,
+    "decision_distribution": {
+      "falsified": 1,
+      "inconclusive": 1,
+      "supported": 1
+    },
+    "decision_exact_match": 1.0,
+    "evidence_integrity": {
+      "verified": 3
+    },
+    "identifiability_distribution": {
+      "identified": 1,
+      "non_identifiable": 1,
+      "underdetermined": 1
+    },
+    "identifiability_exact_match": 1.0,
+    "joint_exact_match": 1.0,
+    "n_claims": 3,
+    "overclaim_rate": 0.0,
+    "promotion_ceiling_exact_match": 1.0
+  },
+  "source_root": "."
+}
