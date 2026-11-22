@@ -2,6 +2,8 @@
 
 Prepared 2026-11-21 for Hisa. This is Yi Cao's engineering/evidence handoff. Agent checks below do not replace human scientific approval. Workload labels are relative effort, not delivery dates: S = focused review or edit; M = several coordinated tasks; L = a new scientific campaign.
 
+Commands and unqualified experiment/registry paths below are relative to **ARC-CM-TMLR**. NPJ and SEED entries name their separate repositories.
+
 ```mermaid
 flowchart LR
  V[Vision: claims remain within their evidence warrant] --> D[Done: reproducible synthetic and bounded pilot evidence]

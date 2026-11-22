@@ -1,5 +1,8 @@
 # ARC Mechanism Closure — npj Computational Materials
 
+> Current Yi Cao handoff: [roadmap, evidence authority and publication gates](docs/handoff/2026-11-21/HANDOFF.md). This dated handoff supersedes historical status prose for project authority; scientific acceptance and PR merge remain separate.
+
+
 Standalone repository for the Yi-led deep-science paper on mechanism
 identifiability in ion-transport research.
 
